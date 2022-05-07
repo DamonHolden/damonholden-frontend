@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    background: darkviolet;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+
+.content {
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.code {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 015);
+}
+input {
+    margin-bottom: 10px;
+}
+
+.card {
+    background-color: white;
+    color: darkviolet;
+    padding: 15px 15px 15px 15px;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 015);
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.calculateLocation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculate {
+    font-size: 20px;
+    margin-top: 60px;
+}
+
+.output {
+    font-size: 30px;
+    margin: 20px 0px 20px 0px;
+}
+
+pre {
+    padding: 0px 15px 15px 15px !important;
+    width: fit-content;
+    border: none !important;
+}
+.codeTitle {
+    color: darkviolet;
+    margin-left: 15px;
+}
+
+footer {
+    text-align: center;
+    padding-top: 0px;
+}
+
+.author {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.link {
+    margin-top: 0px;
+}
+a {
+    color: white;
+}
