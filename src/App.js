@@ -54,9 +54,6 @@ function App() {
         </div>
         <CodeSnippet />
         <Footer />
-
-
-        
       </div>
     </div>
   );

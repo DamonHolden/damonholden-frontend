@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "UOS DTS Calculator",
+  "name": "University of Suffolk: Digital Technology Solutions - Degree Calculator",
   "icons": [
     {
       "src": "favicon.ico",
