@@ -1,11 +1,11 @@
 import './styles.css';
-import degreeCalculator from './degreeCalculator';
+import degreeCalculator from './Js functions/degreeCalculator';
 import React, { useState } from 'react';
-import GradeInput from './gradeInput';
-import Footer from './Footer';
-import CodeSnippet from './CodeSnippet';
+import GradeInput from './Components/gradeInput';
+import Footer from './/Components/Footer';
+import CodeSnippet from './/Components/CodeSnippet';
+import Result from './/Components/Result';
 // import 'https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js'
-import Result from './Result';
 
 function App() {
   
