@@ -34,21 +34,26 @@ h1 {
     margin-bottom: 60px;
     box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 015);
 }
-input {
+.gradeInput {
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .card {
-    background-color: white;
+    background-color: rgb(212, 212, 212);
     color: #BB4672;
-    padding: 15px 15px 15px 15px;
+    padding:0px;
     border-radius: 20px;
     margin-bottom: 60px;
     box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 015);
+    width: 100%;
 }
 
 .row {
     display: flex;
+    background-color: white;
+    border-radius: 20px;
+
 }
 
 .column {
@@ -64,12 +69,13 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 15px;
 }
 
 .calculate {
+    margin: 0px;
     font-size: 30px;
     padding: 10px;
-    margin-top: 60px;
     background-color: #BB4672;
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -84,7 +90,6 @@ input {
 .output {
     font-size: 30px;
     width: 80%;
-    margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
 

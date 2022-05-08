@@ -8,7 +8,8 @@ const GradeInput = (props) => {
     <label > 
         {props.label}
         <br/> 
-        <input 
+        <input
+            className="gradeInput"
             value={val} 
             pattern="[0-9]*" 
             onChange={

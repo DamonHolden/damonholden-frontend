@@ -45,12 +45,12 @@ function App() {
                       <GradeInput label="Synoptic Project" id="synopticProject"/>
                     </form>
                   </div>
-                  <div className="calculateLocation">
-                    <input className="calculate" type="button" value="calculate" onClick={() => setResult(degreeCalculator())}/>
-                  </div>
                 </div>
               </div>
-            <Result degree={result}/>
+            <div className="calculateLocation">
+              <Result degree={result}/>
+              <input className="calculate" type="button" value="calculate" onClick={() => setResult(degreeCalculator())}/>
+            </div>
           </div>
         <CodeSnippet />
         <Footer />
