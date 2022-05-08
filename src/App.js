@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import GradeInput from './gradeInput';
 import Footer from './Footer';
 import CodeSnippet from './CodeSnippet';
-import 'https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js'
+// import 'https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js'
 import Result from './Result';
 
 function App() {
