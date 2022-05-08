@@ -1,9 +1,7 @@
 const Footer = () => {
     return (
         <footer>
-            <p className="author">Author: Damon Holden</p>
-            <p className="link"><a href="mailto:d.holden@uos.ac.uk">d.holden@uos.ac.uk</a></p>
-            <p className="link"><a href="https://github.com/DamonHolden/uos-dts-calculator">GitHub Repository</a></p>
+            <p className="author">A React App by Damon Holden | <a href="mailto:d.holden@uos.ac.uk">d.holden@uos.ac.uk</a> | <a href="https://github.com/DamonHolden/uos-dts-calculator">GitHub</a></p>
         </footer>
     );
 }
