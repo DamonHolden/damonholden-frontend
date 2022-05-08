@@ -2,6 +2,8 @@ const CodeSnippet = () => {
 
     const code = `const degreeCalculator = () => {
 
+    let result;
+
     const getData = data => parseInt(document.getElementById(data).value)
 
     const introductionToRelationalDatabases = (getData("introductionToRelationalDatabases1") + getData("introductionToRelationalDatabases2")) / 2
@@ -17,20 +19,22 @@ const CodeSnippet = () => {
     const emergentTechnologies = getData("emergentTechnologies")
     const synopticProject = getData("synopticProject")
     
-    const levelFiveOverall = (
-        [introductionToRelationalDatabases, advancedNetworkingConcepts, dataStructuresAlgorithmsAndAdvancedProgramming, researchSkills, softwareDesignDevelopmentAndEngineering, multimediaMobileAndInternet]
-            .sort((a,b)=>b-a)
-            .splice(0,5)
-            .reduce((partialSum, a) => partialSum + a, 0)
+    const levelFiveOverall = ([
+            introductionToRelationalDatabases, 
+            advancedNetworkingConcepts,dataStructuresAlgorithmsAndAdvancedProgramming,
+            researchSkills,
+            softwareDesignDevelopmentAndEngineering,
+            multimediaMobileAndInternet
+        ].sort((a,b)=>b-a).splice(0,5).reduce((partialSum, a) => partialSum + a, 0)
     ) / 5
 
-    const levelSixOverall = (
-        ([distributedSystems, cyberSecurityDefence, informationEngineering, cyberSecurityAttack]
-            .sort((a,b)=>b-a)
-            .splice(0,3)
-            .reduce((partialSum, a) => partialSum + a, 0)
-        ) + ((((synopticProject * 3) + emergentTechnologies) / 4) * 2)
-    ) / 5
+    const levelSixOverall = (([
+            distributedSystems, 
+            cyberSecurityDefence, 
+            informationEngineering, 
+            cyberSecurityAttack
+        ].sort((a,b)=>b-a).splice(0,3).reduce((partialSum, a) => partialSum + a, 0)
+    ) + ((((synopticProject * 3) + emergentTechnologies) / 4) * 2)) / 5
 
     const degreeType = percentage => {
         if (percentage >= 70) return "1st"
@@ -41,11 +45,12 @@ const CodeSnippet = () => {
     }
 
     const overallMark = Math.round((((levelFiveOverall * 4) + (levelSixOverall * 6)) / 10))
-    
-    if (isNaN(overallMark)) document.getElementById("output").innerHTML = "Make sure all grade fields are filled out before calculating."
-    else document.getElementById("output").innerHTML = "You're calculated degree is " + overallMark + "%, which would be a " + degreeType(overallMark)
-}`
 
+    if (isNaN(overallMark)) result = "Make sure all grade fields are filled out before calculating."
+    else result = "You're calculated degree is " + overallMark + "%, which would be a " + degreeType(overallMark)
+
+    return result
+}`
 
     return (
     <div class="code">
