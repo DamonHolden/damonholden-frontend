@@ -17,8 +17,7 @@ const degreeCalculator = () => {
     const emergentTechnologies = getData("emergentTechnologies")
     const synopticProject = getData("synopticProject")
     
-    const levelFiveOverall = (
-        [
+    const levelFiveOverall = ([
             introductionToRelationalDatabases, 
             advancedNetworkingConcepts,
             dataStructuresAlgorithmsAndAdvancedProgramming,
@@ -28,8 +27,7 @@ const degreeCalculator = () => {
         ].sort((a,b)=>b-a).splice(0,5).reduce((partialSum, a) => partialSum + a, 0)
     ) / 5
 
-    const levelSixOverall = ((
-        [
+    const levelSixOverall = (([
             distributedSystems, 
             cyberSecurityDefence, 
             informationEngineering, 
