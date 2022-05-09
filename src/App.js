@@ -9,9 +9,9 @@ import {
 import DatabaseTester from './Components/DatabaseTester';
 import NavBar from './Components/NavBar';
 // import 'https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js'
+// pretify link currently bugged when building in netilfy
 
 function App() {
-
   return (
     <Router>
       <div className='App'>

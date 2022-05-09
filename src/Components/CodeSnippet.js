@@ -53,12 +53,12 @@ const CodeSnippet = () => {
 }`
 
     return (
-    <div class="code">
-        <h2 class="codeTitle">JavaScript logic</h2>
-        <pre class="prettyprint">
-            { code }
-        </pre>
-    </div>
+        <div class="code">
+            <h2 class="codeTitle">JavaScript logic</h2>
+            <pre class="prettyprint">
+                { code }
+            </pre>
+        </div>
     );
 }
 
