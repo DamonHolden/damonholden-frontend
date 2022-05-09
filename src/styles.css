@@ -13,6 +13,9 @@ body {
     height: 100%;
     background-image: url(//cdn.shopify.com/s/files/1/2428/0073/t/30/assets/bg.jpg?v=1269992…);
     z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right 25%;
 }
 
 Nav {
