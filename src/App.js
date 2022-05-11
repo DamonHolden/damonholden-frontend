@@ -17,7 +17,7 @@ function App() {
           <NavBar />
           <Routes>
             <Route path='/' exact element={<Home />} />
-            <Route path='/UOSDTSCalculator' element={<Calculator />} />
+            <Route path='/UOS_DTS_Calculator' element={<Calculator />} />
             <Route path='/DatabaseTester' element={<DatabaseTester />} />
           </Routes>
           <Footer />
