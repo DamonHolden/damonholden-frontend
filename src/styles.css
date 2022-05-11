@@ -1,149 +1,147 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
-    background-color: transparent;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    margin: 0px;
+  background-color: transparent;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin: 0px;
 }
 
 .background {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-image: url(//cdn.shopify.com/s/files/1/2428/0073/t/30/assets/bg.jpg?v=1269992…);
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center right 25%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url(//cdn.shopify.com/s/files/1/2428/0073/t/30/assets/bg.jpg?v=1269992…);
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right 25%;
 }
 
 Nav {
-    margin : 50px 0px 20px 0px;
+  margin: 50px 0px 20px 0px;
 }
 
 a {
-    color: white;
-    margin-right: 20px;
-    margin-left:20px;
-    padding: 10px;
-    text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 10px;
+  text-decoration: none;
 }
 
 a:hover {
-    color: #BB4672;
-    border-radius: 10px;
-    background: white;
+  color: #bb4672;
+  border-radius: 10px;
+  background: white;
 }
 
 a:active {
-    background: rgb(172, 172, 172);
+  background: rgb(172, 172, 172);
 }
 
 .content {
-    margin: auto;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
-    font-size: 50px;
-    text-shadow: 2px 2px rgba(0, 0, 0, 015);
+  font-size: 50px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 015);
 }
 
 .code {
-    background-color: white;
-    color: black;
-    border-radius: 20px;
-    margin-bottom: 60px;
-    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 015);
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 015);
 }
 .gradeInput {
-    margin-bottom: 10px;
-    width: 100%;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 .card {
-    background-color: rgb(212, 212, 212);
-    color: #BB4672;
-    padding:0px;
-    border-radius: 20px;
-    margin-bottom: 60px;
-    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 015);
-    width: 100%;
+  background-color: rgb(212, 212, 212);
+  color: #bb4672;
+  padding: 0px;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 015);
+  width: 100%;
 }
 
 .row {
-    display: flex;
-    background-color: white;
-    border-radius: 20px;
-
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
 }
 
 .column {
-    flex: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 20px;
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
 }
 .form {
-    width: 80%;
+  width: 80%;
 }
 .calculateLocation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
 }
 
 .calculate {
-    margin: 0px;
-    font-size: 30px;
-    padding: 10px;
-    background-color: #BB4672;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    border-color: transparent;
-    border-radius: 10px;
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, 015);
+  margin: 0px;
+  font-size: 30px;
+  padding: 10px;
+  background-color: #bb4672;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  border-color: transparent;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 015);
 }
 
 .calculate:hover {
-    background-color: #8b3456;
-} 
+  background-color: #8b3456;
+}
 
 .calculate:active {
-    background-color: #471b2d;
-    color: rgb(184, 184, 184);
+  background-color: #471b2d;
+  color: rgb(184, 184, 184);
 }
 .output {
-    font-size: 30px;
-    width: 80%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
+  font-size: 30px;
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 pre {
-    padding: 0px 15px 15px 15px !important;
-    width: fit-content;
-    border: none !important;
+  padding: 0px 15px 15px 15px !important;
+  width: fit-content;
+  border: none !important;
 }
 .codeTitle {
-    color: #BB4672;
-    margin-left: 15px;
+  color: #bb4672;
+  margin-left: 15px;
 }
 
 footer {
-    text-align: center;
-    padding-top: 0px;
-    margin-bottom: 40px;
+  text-align: center;
+  padding-top: 0px;
+  margin-bottom: 40px;
 }
 
 .footer-link {
-    margin-right: 0px;
-    margin-left: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
 }

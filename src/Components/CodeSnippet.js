@@ -1,6 +1,5 @@
 const CodeSnippet = () => {
-
-    const code = `const degreeCalculator = () => {
+  const code = `const degreeCalculator = () => {
 
     let result;
 
@@ -15,7 +14,7 @@ const CodeSnippet = () => {
     const distributedSystems = getData("distributedSystems")
     const informationEngineering = getData("informationEngineering")
     const cyberSecurityAttack = getData("cyberSecurityAttack")
-    const cyberSecurityDefence = getData("cyberSecurityDefence")
+    const cyberSecurityDefense = getData("cyberSecurityDefense")
     const emergentTechnologies = getData("emergentTechnologies")
     const synopticProject = getData("synopticProject")
     
@@ -30,7 +29,7 @@ const CodeSnippet = () => {
 
     const levelSixOverall = (([
             distributedSystems, 
-            cyberSecurityDefence, 
+            cyberSecurityDefense, 
             informationEngineering, 
             cyberSecurityAttack
         ].sort((a,b)=>b-a).splice(0,3).reduce((partialSum, a) => partialSum + a, 0)
@@ -50,16 +49,14 @@ const CodeSnippet = () => {
     else result = "You're calculated degree is " + overallMark + "%, which would be a " + degreeType(overallMark)
 
     return result
-}`
+}`;
 
-    return (
-        <div class="code">
-            <h2 class="codeTitle">JavaScript logic</h2>
-            <pre class="prettyprint">
-                { code }
-            </pre>
-        </div>
-    );
-}
+  return (
+    <div class="code">
+      <h2 class="codeTitle">JavaScript logic</h2>
+      <pre class="prettyprint">{code}</pre>
+    </div>
+  );
+};
 
 export default CodeSnippet;
