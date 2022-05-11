@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
   return (
     <nav>
-      <Link to="/">Calculator</Link>
-      <Link to="/DatabaseTester">Database Tester</Link>
+      <Link to='/'>Home</Link>
+      <Link to='/UOS_DTS_Calculator'>UOS DTS Calculator</Link>
+      <Link to='/DatabaseTester'>Database Tester</Link>
     </nav>
   );
 };
