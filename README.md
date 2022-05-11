@@ -1,17 +1,20 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/573b3f1b-298c-4663-9abe-d38266abcb47/deploy-status)](https://app.netlify.com/sites/uosdtscalculator/deploys)
+# UOS DTS Degree Calculator
 
-# Getting Started with Create React App
+This React application was developed to allow students of the university of suffolk undergoing the Digital Technology Solutions apprenticeship degree to calculate their final degree based on their marks acquired throughout the course. Of course, this tool can also be used to work out what marks would need to be achieved in future modules to achieve a particular level of degree.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+while I have tested that the calculation that this tool should make is correct, whether or not it reflects the University of Suffolk's calculation for the DTS degrees **is not** guaranteed. I have written the maths based on my **best knowledge** of how the DTS degrees are calculated. This is by no means a guaranteed of what your degree will/could be.
 
-## Things to add
+This tool is **unofficial**, so the University of Suffolk has no ties to this project at all, other than the fact I'm a current student. Anyone looking to get official support for their degree should seek a process facilitated by the University of Suffolk, not this tool.
 
-API functionality
-useRef React Hook
+while the source code for this project was written from scratch, the project was initially bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Live deployment of project (hosted by Netlify)
+
+[UOS DTS Degree Calculator](https://uosdtscalculator.netlify.app/) [![Netlify Status](https://api.netlify.com/api/v1/badges/573b3f1b-298c-4663-9abe-d38266abcb47/deploy-status)](https://app.netlify.com/sites/uosdtscalculator/deploys)
 
 ## Available Scripts
 
-In the project directory, you can run:
+Following install of dependencies, you can run:
 
 ### `npm start`
 
@@ -45,33 +48,3 @@ If you aren't satisfied with the build tool and configuration choices, you can `
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
