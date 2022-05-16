@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
-  background-color: transparent;
-  color: white;
   font-family: 'Roboto', sans-serif;
   margin: 0px;
 }
@@ -18,130 +16,128 @@ body {
   background-position: center right 25%;
 }
 
-Nav {
-  margin: 50px 0px 20px 0px;
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.page-navbar {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 a {
   color: white;
-  margin-right: 20px;
-  margin-left: 20px;
   padding: 10px;
   text-decoration: none;
 }
-
 a:hover {
   color: #bb4672;
   border-radius: 10px;
   background: white;
 }
-
 a:active {
   background: rgb(172, 172, 172);
 }
 
-.content {
-  margin: auto;
-  width: 50%;
+.card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 60px;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 015);
+  max-width: 100%;
+}
+
+.inner-card {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: rgb(206, 206, 206);
+  justify-content: center;
+  padding: 20px 20px 0px 20px;
+  border-radius: 20px;
 }
 
 h1 {
   font-size: 50px;
   text-shadow: 2px 2px rgba(0, 0, 0, 015);
+  color: white;
+  margin-top: 0px;
 }
 
-.code {
-  background-color: white;
-  color: black;
-  border-radius: 20px;
-  margin-bottom: 60px;
-  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 015);
-}
-.gradeInput {
-  margin-bottom: 10px;
-  width: 100%;
-}
-
-.card {
-  background-color: rgb(212, 212, 212);
+h2 {
   color: #bb4672;
-  padding: 0px;
-  border-radius: 20px;
-  margin-bottom: 60px;
-  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 015);
-  width: 100%;
+  margin-top: 0px;
 }
 
-.row {
+.grade-form-area {
   display: flex;
-  background-color: white;
-  border-radius: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.column {
-  flex: 50%;
+.grade-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-bottom: 20px;
-}
-.form {
-  width: 80%;
-}
-.calculateLocation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
+  margin-bottom: 15px;
 }
 
-.calculate {
-  margin: 0px;
-  font-size: 30px;
+.grade-input {
+  margin-bottom: 15px;
+  margin-top: 5px;
+}
+
+.calculate-button {
+  font-size: 20px;
   padding: 10px;
   background-color: #bb4672;
   color: white;
-  font-family: 'Roboto', sans-serif;
   border-color: transparent;
   border-radius: 10px;
   box-shadow: 2px 2px 0 rgba(0, 0, 0, 015);
+  margin-bottom: 20px;
 }
-
-.calculate:hover {
+.calculate-button:hover {
   background-color: #8b3456;
 }
-
-.calculate:active {
+.calculate-button:active {
   background-color: #471b2d;
   color: rgb(184, 184, 184);
 }
+
 .output {
-  font-size: 30px;
+  font-size: 20px;
   width: 80%;
-  margin-top: 20px;
   margin-bottom: 20px;
 }
 
 pre {
-  padding: 0px 15px 15px 15px !important;
-  width: fit-content;
   border: none !important;
-}
-.codeTitle {
-  color: #bb4672;
-  margin-left: 15px;
+  /* only needed as the prettify package adds a black border by default which does not look visually appealing */
+  overflow: auto;
+  max-width: 100%;
 }
 
 footer {
-  text-align: center;
-  padding-top: 0px;
-  margin-bottom: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
 }
-
-.footer-link {
-  margin-right: 0px;
-  margin-left: 0px;
+.author {
+  margin-bottom: 5px;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

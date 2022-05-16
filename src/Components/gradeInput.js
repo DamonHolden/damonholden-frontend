@@ -8,13 +8,13 @@ const GradeInput = (props) => {
       {props.label}
       <br />
       <input
-        className="gradeInput"
+        className='grade-input'
         value={val}
-        pattern="[0-9]*"
+        pattern='[0-9]*'
         onChange={(e) =>
           setVal((v) => (e.target.validity.valid ? e.target.value : v))
         }
-        type="text"
+        type='text'
         id={props.id}
         name={props.id}
         maxLength={2}
