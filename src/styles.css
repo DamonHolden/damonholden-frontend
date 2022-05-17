@@ -175,6 +175,7 @@ footer {
   border-radius: 20px;
   border-style: solid;
   border-color: #bb4672;
+  border-width: thick;
   position: relative;
   overflow: hidden;
   width: 100%;

@@ -2,7 +2,7 @@ const Video = (props) => {
   const src =
     'https://www.youtube.com/embed/' +
     props.videoId +
-    '?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&theme=light&fs=0' +
+    '?modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&theme=light' +
     props.timeStart +
     props.timeEnd;
   return (

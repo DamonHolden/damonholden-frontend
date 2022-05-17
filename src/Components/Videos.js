@@ -15,7 +15,7 @@ const Videos = () => {
             timeEnd='&end=234'
           />
           <Video videoId='oNr6T8eOfg0' />
-          <Video videoId='hTnedziWTvc' timeStart='&start=19' />
+          <Video videoId='hTnedziWTvc' timeStart='&start=19' timeEnd='' />
           <Video videoId='qKCKWNTSDhg' />
           <Video videoId='X21mJh6j9i4' />
         </div>
