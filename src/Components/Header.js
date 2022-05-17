@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { DarkThemeContext } from './DarkThemeContext';
 
 const Header = () => {
-  const { darkTheme, toggleTheme } = useContext(DarkThemeContext);
+  const { darkTheme, setDarkTheme } = useContext(DarkThemeContext);
 
   return (
     <div className='header'>
@@ -21,7 +21,10 @@ const Header = () => {
           Videos
         </Link>
       </nav>
-      <button className='theme-button' onClick={toggleTheme}>
+      <button
+        className='theme-button'
+        onClick={() => setDarkTheme((previousTheme) => !previousTheme)}
+      >
         {darkTheme ? 'Toggle Light Theme' : 'Toggle Dark Theme'}
       </button>
     </div>

@@ -4,10 +4,9 @@ export const DarkThemeContext = createContext();
 
 export const DarkThemeContextProvider = (props) => {
   const [darkTheme, setDarkTheme] = useState(false);
-  const toggleTheme = () => setDarkTheme((prevTheme) => !prevTheme);
   const contextValue = {
     darkTheme,
-    toggleTheme,
+    setDarkTheme,
   };
   return (
     <DarkThemeContext.Provider value={contextValue}>
