@@ -28,17 +28,17 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
-a {
+.nav-link {
   color: white;
   padding: 10px;
   text-decoration: none;
 }
-a:hover {
+.nav-link:hover {
   color: #bb4672;
   border-radius: 10px;
   background: white;
 }
-a:active {
+.nav-link:active {
   background: rgb(172, 172, 172);
 }
 
@@ -138,4 +138,52 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.footer-link {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+.footer-link:hover {
+  color: #bb4672;
+  border-radius: 10px;
+  background: white;
+}
+.footer-link:active {
+  background: rgb(172, 172, 172);
+}
+
+.eddie-hearn-link {
+  text-decoration: none;
+  color: #bb4672;
+}
+
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1290px;
+}
+.video-container {
+  width: 400px;
+  padding: 15px;
+}
+.video {
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #bb4672;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }

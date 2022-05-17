@@ -1,15 +1,32 @@
 const Home = () => {
+  const eddieHearnLink =
+    ' some positive words from boxing promoter Eddie Hearn.';
   return (
     <>
-      <h1>Welcome to my website</h1>
-      <h2>
-        This website showcases various bits and bobs that I develop in my spare
-        time.
-      </h2>
-      <h2>
-        The main element of this site so far is the UOS DTS Calculator which can
-        be accessed using the navigation link at the top of this screen
-      </h2>
+      <h1>Welcome to my site</h1>
+      <div className='card'>
+        <h2>Just a bit of info on what this all is:</h2>
+        <p>
+          This website showcases various bits and bobs that I develop in my
+          spare time.
+        </p>
+        <p>
+          Links to all the pages can be found at the top of this page and my
+          contact email and GitHub repository links can be found in the footer.
+        </p>
+        <p>
+          If you found gained nothing useful from any of these projects, here
+          are
+          <a
+            className='eddie-hearn-link'
+            href='https://m.youtube.com/watch?t=1505&v=HXpj7mpm6hA&feature=youtu.be'
+            target={'_blank'}
+            rel='noreferrer'
+          >
+            {eddieHearnLink}
+          </a>
+        </p>
+      </div>
     </>
   );
 };
