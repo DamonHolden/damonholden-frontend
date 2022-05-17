@@ -2,17 +2,23 @@ import degreeCalculator from '../Js functions/degreeCalculator';
 import GradeInput from './gradeInput';
 import CodeSnippet from './CodeSnippet';
 import Result from './Result';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { DarkThemeContext } from './DarkThemeContext';
 
 const Calculator = () => {
   const [result, setResult] = useState(
     'Enter module grades above to get your overall degree percentage.'
   );
+  const { darkTheme } = useContext(DarkThemeContext);
+  const cardStyles = {
+    backgroundColor: darkTheme ? 'rgb(48, 48, 48)' : '',
+    color: darkTheme ? 'white' : '',
+  };
 
   return (
     <>
       <h1>UOS DTS Grade Calculator</h1>
-      <div className='card'>
+      <div className='card' style={cardStyles}>
         <div className='grade-form-area'>
           <div className='grade-form'>
             <h2>Level 5</h2>
@@ -70,12 +76,12 @@ const Calculator = () => {
         </div>
         <div className='inner-card'>
           <Result degree={result} />
-          <input
+          <button
             className='calculate-button'
-            type='button'
-            value='calculate'
             onClick={() => setResult(degreeCalculator())}
-          />
+          >
+            Calculate
+          </button>
         </div>
       </div>
       <CodeSnippet />

@@ -6,21 +6,24 @@ import DatabaseTester from './Components/DatabaseTester';
 import Videos from './Components/Videos';
 import Footer from './/Components/Footer';
 import './styles.css';
+import { DarkThemeContextProvider } from './Components/DarkThemeContext';
 
 const App = () => {
   return (
     <Router>
-      <div className='background' />
-      <div className='App'>
-        <Header />
-        <Routes>
-          <Route path='/' exact element={<Home />} />
-          <Route path='/UOS_DTS_Calculator' element={<Calculator />} />
-          <Route path='/DatabaseTester' element={<DatabaseTester />} />
-          <Route path='/Videos' element={<Videos />} />
-        </Routes>
-        <Footer />
-      </div>
+      <DarkThemeContextProvider>
+        <div className='background' />
+        <div className='App'>
+          <Header />
+          <Routes>
+            <Route path='/' exact element={<Home />} />
+            <Route path='/UOS_DTS_Calculator' element={<Calculator />} />
+            <Route path='/DatabaseTester' element={<DatabaseTester />} />
+            <Route path='/Videos' element={<Videos />} />
+          </Routes>
+          <Footer />
+        </div>
+      </DarkThemeContextProvider>
     </Router>
   );
 };

@@ -1,4 +1,12 @@
+import { useContext } from "react";
+import { DarkThemeContext } from "./DarkThemeContext";
+
 const CodeSnippet = () => {
+  const {darkTheme} = useContext(DarkThemeContext)
+  const cardStyles = {
+    backgroundColor: darkTheme ? 'rgb(48, 48, 48)' : '',
+    color: darkTheme ? 'white' : ''
+  }
   const code = `const degreeCalculator = () => {
     let result;
   
@@ -76,7 +84,7 @@ const CodeSnippet = () => {
   };`;
 
   return (
-    <div className='card'>
+    <div className='card' style={cardStyles}>
       <h2 className='code-title'>JavaScript logic</h2>
       <pre className='prettyprint'>{code}</pre>
     </div>

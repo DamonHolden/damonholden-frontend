@@ -1,10 +1,18 @@
 import Video from './Video';
+import { useContext } from 'react';
+import { DarkThemeContext } from './DarkThemeContext';
 
 const Videos = () => {
+  const { darkTheme } = useContext(DarkThemeContext);
+  const cardStyles = {
+    backgroundColor: darkTheme ? 'rgb(48, 48, 48)' : '',
+    color: darkTheme ? 'white' : '',
+  };
+
   return (
     <>
       <h1>Some videos I like, IDK</h1>
-      <div className='card'>
+      <div className='card' style={cardStyles}>
         <div className='videos'>
           <Video videoId='N0YHhxaElvo' />
           <Video videoId='a_0PSZ2S_yw' />

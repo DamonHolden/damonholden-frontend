@@ -1,8 +1,16 @@
+import { useContext } from 'react';
+import { DarkThemeContext } from './DarkThemeContext';
+
 const DatabaseTester = () => {
+  const { darkTheme } = useContext(DarkThemeContext);
+  const cardStyles = {
+    backgroundColor: darkTheme ? 'rgb(48, 48, 48)' : '',
+    color: darkTheme ? 'white' : '',
+  };
   return (
     <>
       <h1>Database Tester</h1>
-      <div className='card'>
+      <div className='card' style={cardStyles}>
         <h2>Wow, such empty</h2>
         <p>
           This section of the site is a placeholder for an eventual way to
