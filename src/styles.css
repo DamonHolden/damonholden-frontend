@@ -69,6 +69,8 @@ h1 {
   text-shadow: 2px 2px rgba(0, 0, 0, 015);
   color: white;
   margin-top: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 h2 {
