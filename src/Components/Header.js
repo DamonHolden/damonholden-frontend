@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const NavBar = () => {
+const Header = () => {
   return (
     <nav className='page-navbar'>
       <Link to='/'>Home</Link>
@@ -10,4 +10,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Header;

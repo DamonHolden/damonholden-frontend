@@ -11,12 +11,11 @@ body {
   height: 100%;
   background-image: url(//cdn.shopify.com/s/files/1/2428/0073/t/30/assets/bg.jpg?v=1269992…);
   z-index: -1;
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: center right 25%;
 }
 
-.content {
+.App {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,6 +51,7 @@ a:active {
   margin-bottom: 60px;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 015);
   max-width: 100%;
+  box-sizing: border-box;
 }
 
 .inner-card {
@@ -121,7 +121,6 @@ pre {
   border: none !important;
   /* only needed as the prettify package adds a black border by default which does not look visually appealing */
   overflow: auto;
-  max-width: 100%;
 }
 
 footer {
@@ -129,12 +128,11 @@ footer {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 60px;
 }
 .author {
   margin-bottom: 5px;
+  text-align: center;
 }
 .links {
   display: flex;

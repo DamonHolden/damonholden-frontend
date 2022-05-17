@@ -2,7 +2,7 @@ import degreeCalculator from '../Js functions/degreeCalculator';
 import GradeInput from './gradeInput';
 import CodeSnippet from './CodeSnippet';
 import Result from './Result';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const Calculator = () => {
   const [result, setResult] = useState(

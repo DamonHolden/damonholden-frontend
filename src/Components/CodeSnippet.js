@@ -76,9 +76,9 @@ const CodeSnippet = () => {
   };`;
 
   return (
-    <div class='card'>
-      <h2 class='code-title'>JavaScript logic</h2>
-      <pre class='prettyprint'>{code}</pre>
+    <div className='card'>
+      <h2 className='code-title'>JavaScript logic</h2>
+      <pre className='prettyprint'>{code}</pre>
     </div>
   );
 };
