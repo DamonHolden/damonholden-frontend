@@ -1,4 +1,4 @@
-# UOS DTS Degree Calculator
+# damonholden - frontend
 
 This React application was developed to allow students of the university of suffolk undergoing the Digital Technology Solutions apprenticeship degree to calculate their final degree based on their marks acquired throughout the course. Of course, this tool can also be used to work out what marks would need to be achieved in future modules to achieve a particular level of degree.
 
