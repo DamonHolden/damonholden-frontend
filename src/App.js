@@ -12,7 +12,6 @@ const App = () => {
   return (
     <Router>
       <DarkThemeContextProvider>
-        <div className='background' />
         <div className='App'>
           <Header />
           <Routes>
