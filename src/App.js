@@ -7,6 +7,7 @@ import Videos from './Components/Videos';
 import Footer from './/Components/Footer';
 import './styles.css';
 import { DarkThemeContextProvider } from './Components/DarkThemeContext';
+import ArrayConverter from './Components/ArrayConverter';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path='/' exact element={<Home />} />
             <Route path='/UOS_DTS_Calculator' element={<Calculator />} />
             <Route path='/DatabaseTester' element={<DatabaseTester />} />
+            <Route path='/Array_Converter' element={<ArrayConverter />} />
             <Route path='/Videos' element={<Videos />} />
           </Routes>
           <Footer />
