@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const GradeInput = (props) => {
-  const [val, setVal] = useState();
+  const [val, setVal] = useState('');
 
   return (
     <label>
@@ -10,14 +10,16 @@ const GradeInput = (props) => {
       <input
         className='grade-input'
         value={val}
-        pattern='[0-9]*'
-        onChange={(e) =>
-          setVal((v) => (e.target.validity.valid ? e.target.value : v))
-        }
-        type='text'
+        onChange={(e) => {
+          if (
+            !isNaN(Number(e.currentTarget.value)) &&
+            e.currentTarget.value.length <= 2
+          )
+            setVal(e.currentTarget.value);
+        }}
+        type='number'
         id={props.id}
         name={props.id}
-        maxLength={2}
       />
       <br />
     </label>

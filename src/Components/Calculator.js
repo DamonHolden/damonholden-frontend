@@ -1,5 +1,5 @@
 import degreeCalculator from '../Js functions/degreeCalculator';
-import GradeInput from './gradeInput';
+import GradeInput from './GradeInput';
 import CodeSnippet from './CodeSnippet';
 import Result from './Result';
 import { useState, useContext } from 'react';
