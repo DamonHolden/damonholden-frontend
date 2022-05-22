@@ -8,7 +8,7 @@ const GradeInput = (props) => {
       {props.label}
       <br />
       <input
-        id={props.id}
+        ref={props.reference}
         className='grade-input'
         value={val}
         onChange={(e) => {

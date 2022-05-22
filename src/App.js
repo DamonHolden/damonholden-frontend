@@ -20,7 +20,7 @@ const App = () => {
             <Route path='/UOS_DTS_Calculator' element={<Calculator />} />
             <Route path='/DatabaseTester' element={<DatabaseTester />} />
             <Route path='/Array_Converter' element={<ArrayConverter />} />
-            <Route path='/Videos' element={<Videos />} />
+            <Route path='/Duck' element={<Videos />} />
           </Routes>
           <Footer />
         </div>

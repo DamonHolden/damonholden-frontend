@@ -1,87 +1,93 @@
-import { useContext } from "react";
-import { DarkThemeContext } from "./DarkThemeContext";
+import { useContext } from 'react';
+import { DarkThemeContext } from './DarkThemeContext';
 
 const CodeSnippet = () => {
-  const {darkTheme} = useContext(DarkThemeContext)
+  const { darkTheme } = useContext(DarkThemeContext);
   const cardStyles = {
     backgroundColor: darkTheme ? 'rgb(48, 48, 48)' : '',
-    color: darkTheme ? 'white' : ''
-  }
+    color: darkTheme ? 'white' : '',
+  };
   const code = `const degreeCalculator = () => {
-    let result;
-  
-    const getData = (data) => parseInt(document.getElementById(data).value);
-  
-    const introductionToRelationalDatabases =
-      (getData('introductionToRelationalDatabases1') +
-        getData('introductionToRelationalDatabases2')) /
-      2;
-    const advancedNetworkingConcepts = getData('advancedNetworkingConcepts');
-    const dataStructuresAlgorithmsAndAdvancedProgramming = getData(
-      'dataStructuresAlgorithmsAndAdvancedProgramming'
-    );
-    const researchSkills = getData('researchSkills');
-    const softwareDesignDevelopmentAndEngineering =
-      (getData('softwareDesignDevelopmentAndEngineering1') +
-        getData('softwareDesignDevelopmentAndEngineering2') * 3) /
-      4;
-    const multimediaMobileAndInternet = getData('multimediaMobileAndInternet');
-    const distributedSystems = getData('distributedSystems');
-    const informationEngineering = getData('informationEngineering');
-    const cyberSecurityAttack = getData('cyberSecurityAttack');
-    const cyberSecurityDefense = getData('cyberSecurityDefense');
-    const emergentTechnologies = getData('emergentTechnologies');
-    const synopticProject = getData('synopticProject');
-  
-    const levelFiveOverall =
-      [
-        introductionToRelationalDatabases,
-        advancedNetworkingConcepts,
-        dataStructuresAlgorithmsAndAdvancedProgramming,
-        researchSkills,
-        softwareDesignDevelopmentAndEngineering,
-        multimediaMobileAndInternet,
-      ]
-        .sort((a, b) => b - a)
-        .splice(0, 5)
-        .reduce((partialSum, a) => partialSum + a, 0) / 5;
-  
-    const levelSixOverall =
-      ([
-        distributedSystems,
-        cyberSecurityDefense,
-        informationEngineering,
-        cyberSecurityAttack,
-      ]
-        .sort((a, b) => b - a)
-        .splice(0, 3)
-        .reduce((partialSum, a) => partialSum + a, 0) +
-        ((synopticProject * 3 + emergentTechnologies) / 4) * 2) /
-      5;
-  
-    const degreeType = (percentage) => {
-      if (percentage >= 70) return '1st';
-      else if (percentage >= 60) return '2:1';
-      else if (percentage >= 50) return '2:2';
-      else if (percentage >= 40) return '3rd';
-      else return 'failed degree';
-    };
-  
-    const overallMark = Math.round(
-      (levelFiveOverall * 4 + levelSixOverall * 6) / 10
-    );
-  
-    if (isNaN(overallMark))
-      result = 'Make sure all grade fields are filled out before calculating.';
-    else
-      result =
-        "You're calculated degree is " +
-        overallMark +
-        '%, which would be a ' +
-        degreeType(overallMark);
-  
-    return result;
-  };`;
+  const getCurrent = (ref) => ref.current.value;
+
+  if (
+    [
+      getCurrent(introductionToRelationalDatabases1),
+      getCurrent(introductionToRelationalDatabases2),
+      getCurrent(advancedNetworkingConcepts),
+      getCurrent(dataStructuresAlgorithmsAndAdvancedProgramming),
+      getCurrent(researchSkills),
+      getCurrent(softwareDesignDevelopmentAndEngineering1),
+      getCurrent(softwareDesignDevelopmentAndEngineering2),
+      getCurrent(multimediaMobileAndInternet),
+      getCurrent(distributedSystems),
+      getCurrent(informationEngineering),
+      getCurrent(cyberSecurityAttack),
+      getCurrent(cyberSecurityDefense),
+      getCurrent(emergentTechnologies),
+      getCurrent(synopticProject),
+    ].includes('')
+  )
+    return 'Make sure all grade fields are filled out before calculating.';
+
+  const getValue = (ref) => Number(ref.current.value);
+
+  const introductionToRelationalDatabases =
+    (getValue(introductionToRelationalDatabases1) +
+      getValue(introductionToRelationalDatabases2)) /
+    2;
+
+  const softwareDesignDevelopmentAndEngineering =
+    (getValue(softwareDesignDevelopmentAndEngineering1) +
+      getValue(softwareDesignDevelopmentAndEngineering2) * 3) /
+    4;
+
+  const levelFiveOverall =
+    [
+      introductionToRelationalDatabases,
+      getValue(advancedNetworkingConcepts),
+      getValue(dataStructuresAlgorithmsAndAdvancedProgramming),
+      getValue(researchSkills),
+      softwareDesignDevelopmentAndEngineering,
+      getValue(multimediaMobileAndInternet),
+    ]
+      .sort((a, b) => b - a)
+      .splice(0, 5)
+      .reduce((partialSum, a) => partialSum + a, 0) / 5;
+
+  const levelSixOverall =
+    ([
+      getValue(distributedSystems),
+      getValue(cyberSecurityDefense),
+      getValue(informationEngineering),
+      getValue(cyberSecurityAttack),
+    ]
+      .sort((a, b) => b - a)
+      .splice(0, 3)
+      .reduce((partialSum, a) => partialSum + a, 0) +
+      ((getValue(synopticProject) * 3 + getValue(emergentTechnologies)) / 4) *
+        2) /
+    5;
+
+  const degreeType = (percentage) => {
+    if (percentage >= 70) return '1st';
+    else if (percentage >= 60) return '2:1';
+    else if (percentage >= 50) return '2:2';
+    else if (percentage >= 40) return '3rd';
+    else return 'failed degree';
+  };
+
+  const overallMark = Math.round(
+    (levelFiveOverall * 4 + levelSixOverall * 6) / 10
+  );
+
+  return (
+    "You're calculated degree is " +
+    overallMark +
+    '%, which would be a ' +
+    degreeType(overallMark)
+  );
+};`;
 
   return (
     <div className='card' style={cardStyles}>

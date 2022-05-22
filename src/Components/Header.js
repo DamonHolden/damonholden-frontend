@@ -20,8 +20,8 @@ const Header = () => {
         <Link className='nav-link' to='/Array_Converter'>
           Array Converter
         </Link>
-        <Link className='nav-link' to='/Videos'>
-          Videos
+        <Link className='nav-link' to='/Duck'>
+          Duck
         </Link>
       </nav>
       <button
