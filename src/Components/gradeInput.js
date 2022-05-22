@@ -8,18 +8,16 @@ const GradeInput = (props) => {
       {props.label}
       <br />
       <input
+        id={props.id}
         className='grade-input'
         value={val}
         onChange={(e) => {
-          if (
-            !isNaN(Number(e.currentTarget.value)) &&
-            e.currentTarget.value.length <= 2
-          )
-            setVal(e.currentTarget.value);
+          if (e.currentTarget.value.length <= 2) setVal(e.currentTarget.value);
+        }}
+        onKeyDown={(e) => {
+          if (['e', '-', '+', '.'].includes(e.key)) e.preventDefault();
         }}
         type='number'
-        id={props.id}
-        name={props.id}
       />
       <br />
     </label>
