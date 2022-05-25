@@ -1,5 +1,3 @@
-import { Card } from './Card';
-
 const CodeSnippet = () => {
   const code = `const degreeCalculator = () => {
   const getCurrent = (ref) => ref.current.value;
@@ -83,12 +81,7 @@ const CodeSnippet = () => {
   );
 };`;
 
-  return (
-    <Card>
-      <h2 className='code-title'>JavaScript logic</h2>
-      <pre className='prettyprint'>{code}</pre>
-    </Card>
-  );
+  return <pre className='prettyprint'>{code}</pre>;
 };
 
 export default CodeSnippet;

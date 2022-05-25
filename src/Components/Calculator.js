@@ -174,22 +174,27 @@ const Calculator = () => {
         <div className='inner-card'>
           <Result degree={result} />
           <button
-            className='calculate-button'
+            className='button-primary'
             onClick={() => setResult(degreeCalculator)}
           >
             Calculate
           </button>
         </div>
       </Card>
-      <button
-        className='calculate-button'
-        onClick={() => setNicePicture((prev) => !prev)}
-      >
-        {nicePicture
-          ? 'show plain text version of code'
-          : 'show nice picture of code'}
-      </button>
-      {nicePicture ? <CodeSnippetPicture /> : <CodeSnippet />}
+      <Card>
+        <div className='sub-heading'>
+          <h2 className='code-title'>JavaScript logic</h2>
+          <button
+            className='button-primary'
+            onClick={() => setNicePicture((prev) => !prev)}
+          >
+            {nicePicture
+              ? 'show plain text version of code'
+              : 'show nice picture of code'}
+          </button>
+        </div>
+        {nicePicture ? <CodeSnippetPicture /> : <CodeSnippet />}
+      </Card>
     </>
   );
 };

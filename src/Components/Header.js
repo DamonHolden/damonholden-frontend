@@ -4,8 +4,8 @@ import { DarkThemeContext } from './DarkThemeContext';
 
 const Header = () => {
   const { darkTheme, setDarkTheme } = useContext(DarkThemeContext);
-  const opposite = () => !darkTheme ? 'true' : 'false'
-  
+  const opposite = () => (!darkTheme ? 'true' : 'false');
+
   return (
     <div className='header'>
       <nav className='page-navbar'>
@@ -26,10 +26,10 @@ const Header = () => {
         </Link>
       </nav>
       <button
-        className='theme-button'
-        onClick={() =>{
-          setDarkTheme((previousTheme) => !previousTheme)
-          localStorage.setItem('darkTheme', opposite())
+        className='button-secondary'
+        onClick={() => {
+          setDarkTheme((previousTheme) => !previousTheme);
+          localStorage.setItem('darkTheme', opposite());
         }}
       >
         {darkTheme ? 'Toggle Light Theme' : 'Toggle Dark Theme'}
