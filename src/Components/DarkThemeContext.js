@@ -3,7 +3,10 @@ import { createContext, useState } from 'react';
 export const DarkThemeContext = createContext();
 
 export const DarkThemeContextProvider = (props) => {
-  const [darkTheme, setDarkTheme] = useState(false);
+  let localDarkTheme
+  if (localStorage.getItem('darkTheme') === 'true') localDarkTheme = true
+  else if (localStorage.getItem('darkTheme') === 'false') localDarkTheme = false
+  const [darkTheme, setDarkTheme] = useState(localDarkTheme);
   const contextValue = {
     darkTheme,
     setDarkTheme,
