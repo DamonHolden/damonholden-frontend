@@ -239,3 +239,7 @@ iframe {
   justify-content: center;
   align-items: center;
 }
+
+.code-image {
+  border-radius: 20px;
+}

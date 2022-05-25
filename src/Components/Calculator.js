@@ -1,6 +1,7 @@
 import GradeInput from './GradeInput';
 import CodeSnippet from './CodeSnippet';
 import Result from './Result';
+import { CodeSnippetPicture } from './CodeSnippetPicture';
 import { useState, useContext, useRef } from 'react';
 import { DarkThemeContext } from './DarkThemeContext';
 
@@ -25,6 +26,7 @@ const Calculator = () => {
   const [result, setResult] = useState(
     'Enter module grades above to get your overall degree percentage.'
   );
+  const [nicePicture, setNicePicture] = useState(false);
 
   const cardStyles = {
     backgroundColor: darkTheme ? 'rgb(48, 48, 48)' : '',
@@ -186,7 +188,15 @@ const Calculator = () => {
           </button>
         </div>
       </div>
-      <CodeSnippet />
+      <button
+        className='calculate-button'
+        onClick={() => setNicePicture((prev) => !prev)}
+      >
+        {nicePicture
+          ? 'show plain text version of code'
+          : 'show nice picture of code'}
+      </button>
+      {nicePicture ? <CodeSnippetPicture /> : <CodeSnippet />}
     </>
   );
 };
