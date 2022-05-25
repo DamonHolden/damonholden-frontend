@@ -1,16 +1,11 @@
-import { useContext, useState } from 'react';
-import { DarkThemeContext } from './DarkThemeContext';
+import { useState } from 'react';
 import axios from 'axios';
+import { Card } from './Card';
 
 const DatabaseTester = () => {
-  const { darkTheme } = useContext(DarkThemeContext);
   const [response, setResponse] = useState(
     'No response from backend this time'
   );
-  const cardStyles = {
-    backgroundColor: darkTheme ? 'rgb(48, 48, 48)' : '',
-    color: darkTheme ? 'white' : '',
-  };
 
   axios
     .get('https://damonholden-backend.herokuapp.com/endpoint')
@@ -21,7 +16,7 @@ const DatabaseTester = () => {
   return (
     <>
       <h1>Database Tester</h1>
-      <div className='card' style={cardStyles}>
+      <Card>
         <h2>Wow, such empty</h2>
         <p>
           This section of the site is a placeholder for an eventual way to
@@ -32,13 +27,13 @@ const DatabaseTester = () => {
           section of the site will allow users to produce API requests to a
           backend.
         </p>
-      </div>
-      <div className='card'>
+      </Card>
+      <Card>
         <h2>{response}</h2>
         {response === 'Hello from the Backend!!!' ? (
           <p>provided by express</p>
         ) : null}
-      </div>
+      </Card>
     </>
   );
 };

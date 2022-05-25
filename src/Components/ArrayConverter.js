@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Card } from './Card';
 
 const ArrayConverter = () => {
   const [convertedArray, setConvertedArray] = useState();
@@ -20,7 +21,7 @@ const ArrayConverter = () => {
   return (
     <>
       <h1>array converter</h1>
-      <div className='card'>
+      <Card>
         <textarea id='list'></textarea>
         <label>
           sort?
@@ -35,7 +36,7 @@ const ArrayConverter = () => {
         </button>
 
         <textarea defaultValue={convertedArray}></textarea>
-      </div>
+      </Card>
     </>
   );
 };

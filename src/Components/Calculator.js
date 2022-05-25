@@ -2,12 +2,10 @@ import GradeInput from './GradeInput';
 import CodeSnippet from './CodeSnippet';
 import Result from './Result';
 import { CodeSnippetPicture } from './CodeSnippetPicture';
-import { useState, useContext, useRef } from 'react';
-import { DarkThemeContext } from './DarkThemeContext';
+import { useState, useRef } from 'react';
+import { Card } from './Card';
 
 const Calculator = () => {
-  const { darkTheme } = useContext(DarkThemeContext);
-
   const introductionToRelationalDatabases1 = useRef();
   const introductionToRelationalDatabases2 = useRef();
   const advancedNetworkingConcepts = useRef();
@@ -27,11 +25,6 @@ const Calculator = () => {
     'Enter module grades above to get your overall degree percentage.'
   );
   const [nicePicture, setNicePicture] = useState(false);
-
-  const cardStyles = {
-    backgroundColor: darkTheme ? 'rgb(48, 48, 48)' : '',
-    color: darkTheme ? 'white' : '',
-  };
 
   const degreeCalculator = () => {
     console.log('calculating degree');
@@ -119,7 +112,7 @@ const Calculator = () => {
   return (
     <>
       <h1>UOS DTS Grade Calculator</h1>
-      <div className='card' style={cardStyles}>
+      <Card>
         <div className='grade-form-area'>
           <div className='grade-form'>
             <h2>Level 5</h2>
@@ -187,7 +180,7 @@ const Calculator = () => {
             Calculate
           </button>
         </div>
-      </div>
+      </Card>
       <button
         className='calculate-button'
         onClick={() => setNicePicture((prev) => !prev)}

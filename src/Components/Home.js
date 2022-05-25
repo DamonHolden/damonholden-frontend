@@ -1,20 +1,14 @@
-import { useContext } from 'react';
-import { DarkThemeContext } from './DarkThemeContext';
 import deploymentDiagram from '../images/deployment_diagram.png';
+import { Card } from './Card';
 
 const Home = () => {
-  const { darkTheme } = useContext(DarkThemeContext);
-  const cardStyles = {
-    backgroundColor: darkTheme ? 'rgb(48, 48, 48)' : '',
-    color: darkTheme ? 'white' : '',
-  };
   const eddieHearnLink =
     ' some positive words from boxing promoter Eddie Hearn.';
 
   return (
     <>
       <h1>hello, one and all</h1>
-      <div className='card' style={cardStyles}>
+      <Card>
         <h2>So what is this site for?</h2>
         <p>
           This website showcases various bits and bobs that I (Damon Holden)
@@ -61,7 +55,7 @@ const Home = () => {
             {eddieHearnLink}
           </a>
         </p>
-      </div>
+      </Card>
     </>
   );
 };
