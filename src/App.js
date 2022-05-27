@@ -1,15 +1,15 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './Components/Header';
-import Home from './Components/Home';
-import Calculator from './Components/Calculator';
-import DatabaseTester from './Components/DatabaseTester';
-import Videos from './Components/Videos';
-import Footer from './/Components/Footer';
+import { Header } from './Components/Header';
+import { Home } from './Components/Home';
+import { Calculator } from './Components/Calculator';
+import { DatabaseTester } from './Components/DatabaseTester';
+import { Videos } from './Components/Videos';
+import { Footer } from './/Components/Footer';
 import './styles.css';
 import { DarkThemeContextProvider } from './Components/DarkThemeContext';
-import ArrayConverter from './Components/ArrayConverter';
+import { ArrayConverter } from './Components/ArrayConverter';
 
-const App = () => {
+export const App = () => {
   return (
     <Router>
       <DarkThemeContextProvider>
@@ -28,5 +28,3 @@ const App = () => {
     </Router>
   );
 };
-
-export default App;

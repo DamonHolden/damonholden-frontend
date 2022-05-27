@@ -1,5 +1,6 @@
-const CodeSnippet = () => {
-  const code = `const degreeCalculator = () => {
+export const CodeSnippet = () => {
+  return (
+    <pre>{`const degreeCalculator = () => {
   const getCurrent = (ref) => ref.current.value;
 
   if (
@@ -79,9 +80,6 @@ const CodeSnippet = () => {
     '%, which would be a ' +
     degreeType(overallMark)
   );
-};`;
-
-  return <pre className='prettyprint'>{code}</pre>;
+};`}</pre>
+  );
 };
-
-export default CodeSnippet;

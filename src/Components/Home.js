@@ -1,7 +1,7 @@
 import deploymentDiagram from '../images/deployment_diagram.png';
 import { Card } from './Card';
 
-const Home = () => {
+export const Home = () => {
   const eddieHearnLink =
     ' some positive words, from boxing promoter, Eddie Hearn.';
 
@@ -61,5 +61,3 @@ const Home = () => {
     </>
   );
 };
-
-export default Home;

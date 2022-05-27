@@ -1,7 +1,7 @@
-import Video from './Video';
+import { Video } from './Video';
 import { Card } from './Card';
 
-const Videos = () => {
+export const Videos = () => {
   return (
     <>
       <h1>behold, the perfect duck</h1>
@@ -13,5 +13,3 @@ const Videos = () => {
     </>
   );
 };
-
-export default Videos;

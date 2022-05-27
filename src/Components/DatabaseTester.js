@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import axios from 'axios';
 import { Card } from './Card';
+import axios from 'axios';
 
-const DatabaseTester = () => {
+export const DatabaseTester = () => {
   const [response, setResponse] = useState(
     'No response from backend this time'
   );
@@ -37,5 +37,3 @@ const DatabaseTester = () => {
     </>
   );
 };
-
-export default DatabaseTester;

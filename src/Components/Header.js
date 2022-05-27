@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { DarkThemeContext } from './DarkThemeContext';
 
-const Header = () => {
+export const Header = () => {
   const { darkTheme, setDarkTheme } = useContext(DarkThemeContext);
   const opposite = () => (!darkTheme ? 'true' : 'false');
 
@@ -37,5 +37,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;

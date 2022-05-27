@@ -1,4 +1,4 @@
-const Result = (props) => {
+export const Result = (props) => {
   if (
     props.degree ===
     'Make sure all grade fields are filled out before calculating.'
@@ -15,5 +15,3 @@ const Result = (props) => {
       </div>
     );
 };
-
-export default Result;

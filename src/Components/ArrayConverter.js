@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Card } from './Card';
 
-const ArrayConverter = () => {
+export const ArrayConverter = () => {
   const [convertedArray, setConvertedArray] = useState();
 
   const makeArray = () => {
@@ -40,5 +40,3 @@ const ArrayConverter = () => {
     </>
   );
 };
-
-export default ArrayConverter;

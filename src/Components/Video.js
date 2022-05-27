@@ -1,4 +1,4 @@
-const Video = (props) => {
+export const Video = (props) => {
   const src = 'https://www.youtube-nocookie.com/embed/' + props.videoId;
   return (
     <div className='video-container'>
@@ -16,5 +16,3 @@ const Video = (props) => {
     </div>
   );
 };
-
-export default Video;

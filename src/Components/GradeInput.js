@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const GradeInput = (props) => {
+export const GradeInput = (props) => {
   const [val, setVal] = useState('');
 
   return (
@@ -23,5 +23,3 @@ const GradeInput = (props) => {
     </label>
   );
 };
-
-export default GradeInput;

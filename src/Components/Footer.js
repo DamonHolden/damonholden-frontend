@@ -1,6 +1,6 @@
 import gitHubMark from '../images/GitHub-Mark-Light-64px.png';
 
-const Footer = () => {
+export const Footer = () => {
   const author = 'Built (for better or for worse) by Damon Holden';
   const email = 'D.holden@uos.ac.uk';
 
@@ -29,5 +29,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

@@ -1,11 +1,11 @@
-import GradeInput from './GradeInput';
-import CodeSnippet from './CodeSnippet';
-import Result from './Result';
+import { GradeInput } from './GradeInput';
+import { CodeSnippet } from './CodeSnippet';
+import { Result } from './Result';
 import { CodeSnippetPicture } from './CodeSnippetPicture';
 import { useState, useRef } from 'react';
 import { Card } from './Card';
 
-const Calculator = () => {
+export const Calculator = () => {
   const introductionToRelationalDatabases1 = useRef();
   const introductionToRelationalDatabases2 = useRef();
   const advancedNetworkingConcepts = useRef();
@@ -198,5 +198,3 @@ const Calculator = () => {
     </>
   );
 };
-
-export default Calculator;
