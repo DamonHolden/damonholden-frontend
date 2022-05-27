@@ -55,6 +55,7 @@ body {
 p {
   width: 800px;
   max-width: 100%;
+  margin: 0px;
 }
 
 .inner-card {
@@ -69,24 +70,27 @@ p {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 60px;
   text-transform: capitalize;
   text-shadow: 2px 2px rgba(0, 0, 0, 015);
   color: white;
   margin-top: 0px;
   margin-bottom: 0px;
+  width: 700px;
+  max-width: 100%;
 }
 
 h2 {
   color: var(--primary-color);
+  font-size: 30px;
   margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 img {
   width: 700px;
   max-width: 100%;
   align-self: center;
-  margin: 16px 0px 16px 0px;
 }
 
 textarea {
@@ -174,17 +178,28 @@ footer {
   color: white;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   max-width: 100%;
+  gap: 10px;
 }
+
+.netlify-link {
+  height: 40px;
+  width: auto;
+}
+
 .author {
-  margin-bottom: 5px;
   text-align: center;
 }
 .links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
 }
 
 .footer-link {
@@ -253,4 +268,15 @@ iframe {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 10px;
+}
+
+.github-link {
+  width: 40px;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }

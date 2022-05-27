@@ -115,7 +115,7 @@ const Calculator = () => {
       <Card>
         <div className='grade-form-area'>
           <div className='grade-form'>
-            <h2>Level 5</h2>
+            <h2>Level 5:</h2>
             <GradeInput
               label='Introduction to Relational Databases: Assignment 1:'
               reference={introductionToRelationalDatabases1}
@@ -147,9 +147,9 @@ const Calculator = () => {
             />
           </div>
           <div className='grade-form'>
-            <h2>Level 6</h2>
+            <h2>Level 6:</h2>
             <GradeInput
-              label='Distributed Systems'
+              label='Distributed Systems:'
               reference={distributedSystems}
             />
             <GradeInput

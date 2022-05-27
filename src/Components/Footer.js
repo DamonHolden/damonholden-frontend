@@ -1,7 +1,8 @@
+import gitHubMark from '../images/GitHub-Mark-Light-64px.png';
+
 const Footer = () => {
-  const author = 'A React App by Damon Holden';
-  const email = 'd.holden@uos.ac.uk';
-  const repository = 'GitHub';
+  const author = 'Built (for better or for worse) by Damon Holden';
+  const email = 'D.holden@uos.ac.uk';
 
   return (
     <footer>
@@ -11,12 +12,18 @@ const Footer = () => {
           {email}
         </a>
         <a
-          className='footer-link'
           href='https://github.com/DamonHolden/uos-dts-calculator'
           target={'_blank'}
           rel='noreferrer'
         >
-          {repository}
+          <img className='github-link' alt='GitHub Repo' src={gitHubMark} />
+        </a>
+        <a href='https://www.netlify.com'>
+          <img
+            className='netlify-link'
+            alt='Netlify link'
+            src='https://www.netlify.com/img/global/badges/netlify-light.svg'
+          />
         </a>
       </div>
     </footer>
@@ -24,5 +31,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-// test
