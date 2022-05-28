@@ -4,8 +4,14 @@ import { Result } from './Result';
 import { CodeSnippetPicture } from './CodeSnippetPicture';
 import { useState, useRef } from 'react';
 import { Card } from './Card';
+import { animated, useSpring } from 'react-spring';
 
 export const Calculator = () => {
+  const springProps = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+  });
+
   const introductionToRelationalDatabases1 = useRef();
   const introductionToRelationalDatabases2 = useRef();
   const advancedNetworkingConcepts = useRef();
@@ -110,7 +116,7 @@ export const Calculator = () => {
   };
 
   return (
-    <>
+    <animated.div className='page' style={springProps}>
       <h1>UOS DTS Grade Calculator</h1>
       <Card>
         <div className='grade-form-area'>
@@ -195,6 +201,6 @@ export const Calculator = () => {
         </div>
         {nicePicture ? <CodeSnippetPicture /> : <CodeSnippet />}
       </Card>
-    </>
+    </animated.div>
   );
 };

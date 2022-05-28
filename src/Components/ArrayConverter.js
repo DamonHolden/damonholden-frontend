@@ -1,7 +1,12 @@
 import { useState } from 'react';
 import { Card } from './Card';
+import { animated, useSpring } from 'react-spring';
 
 export const ArrayConverter = () => {
+  const springProps = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+  });
   const [convertedArray, setConvertedArray] = useState();
 
   const makeArray = () => {
@@ -19,7 +24,7 @@ export const ArrayConverter = () => {
     setConvertedArray(betterText.slice(0, -2));
   };
   return (
-    <>
+    <animated.div className='page' style={springProps}>
       <h1>array converter</h1>
       <Card>
         <textarea id='list'></textarea>
@@ -37,6 +42,6 @@ export const ArrayConverter = () => {
 
         <textarea defaultValue={convertedArray}></textarea>
       </Card>
-    </>
+    </animated.div>
   );
 };

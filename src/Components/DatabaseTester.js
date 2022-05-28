@@ -1,8 +1,14 @@
 import { useState } from 'react';
 import { Card } from './Card';
 import axios from 'axios';
+import { animated, useSpring } from 'react-spring';
 
 export const DatabaseTester = () => {
+  const springProps = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+  });
+
   const [response, setResponse] = useState(
     'No response from backend this time'
   );
@@ -14,7 +20,7 @@ export const DatabaseTester = () => {
     });
 
   return (
-    <>
+    <animated.div className='page' style={springProps}>
       <h1>Database Tester</h1>
       <Card>
         <h2>Wow, such empty</h2>
@@ -34,6 +40,6 @@ export const DatabaseTester = () => {
           <p>provided by express</p>
         ) : null}
       </Card>
-    </>
+    </animated.div>
   );
 };

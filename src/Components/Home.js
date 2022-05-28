@@ -1,12 +1,18 @@
 import deploymentDiagram from '../images/deployment_diagram.png';
 import { Card } from './Card';
+import { animated, useSpring } from 'react-spring';
 
 export const Home = () => {
+  const springProps = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+  });
+
   const eddieHearnLink =
     ' some positive words, from boxing promoter, Eddie Hearn.';
 
   return (
-    <>
+    <animated.div className='page' style={springProps}>
       <h1>Hi, I'm Damon, and on occasion, I like to build things.</h1>
       <Card>
         <h2>So what is this site for?</h2>
@@ -58,6 +64,6 @@ export const Home = () => {
           </p>
         </div>
       </Card>
-    </>
+    </animated.div>
   );
 };
