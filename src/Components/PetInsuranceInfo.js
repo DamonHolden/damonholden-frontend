@@ -159,6 +159,7 @@ export const PetInsuranceInfo = () => {
         </label>
       </form>
       <button
+        className='button-primary'
         onClick={() => {
           // https://youtu.be/io2blfAlO6E
           const time = new Date();
