@@ -4,6 +4,7 @@ import { Home } from './Components/Home';
 import { Calculator } from './Components/Calculator';
 import { DatabaseTester } from './Components/DatabaseTester';
 import { Videos } from './Components/Videos';
+import { PetInsuranceInfo } from './Components/PetInsuranceInfo';
 import { Footer } from './/Components/Footer';
 import './styles.css';
 import { DarkThemeContextProvider } from './Components/DarkThemeContext';
@@ -21,6 +22,7 @@ export const App = () => {
             <Route path='/DatabaseTester' element={<DatabaseTester />} />
             <Route path='/Array_Converter' element={<ArrayConverter />} />
             <Route path='/Duck' element={<Videos />} />
+            <Route path='/Pet_Insurance_Info' element={<PetInsuranceInfo />} />
           </Routes>
           <Footer />
         </div>

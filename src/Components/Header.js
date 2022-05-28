@@ -24,6 +24,9 @@ export const Header = () => {
         <Link className='nav-link' to='/Duck'>
           Duck
         </Link>
+        <Link className='nav-link' to='Pet_Insurance_Info'>
+          Pet Insurance Info
+        </Link>
       </nav>
       <button
         className='button-secondary'
