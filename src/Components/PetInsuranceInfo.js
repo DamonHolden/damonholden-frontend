@@ -26,8 +26,8 @@ export const PetInsuranceInfo = () => {
   return (
     <animated.div className='page' style={springProps}>
       <Card>
-        <form>
-          <label>
+        <form className='pet-form'>
+          <label className='petInfo'>
             Type of animal:
             <br />
             <select ref={typeOfAnimal}>
@@ -36,7 +36,7 @@ export const PetInsuranceInfo = () => {
             </select>
             <br />
           </label>
-          <label>
+          <label className='petInfo'>
             Pet's name:
             <br />
             <input
@@ -48,7 +48,7 @@ export const PetInsuranceInfo = () => {
             />
             <br />
           </label>
-          <label>
+          <label className='petInfo'>
             {petName ? petName : 'Pet'}'s gender:
             <br />
             <select ref={gender}>
@@ -57,13 +57,13 @@ export const PetInsuranceInfo = () => {
             </select>
             <br />
           </label>
-          <label>
+          <label className='petInfo'>
             {petName ? petName : 'Pet'}'s date of birth:
             <br />
             <input ref={dateOfBirth} type='date' />
             <br />
           </label>
-          <label>
+          <label className='petInfo'>
             {petName ? petName : 'Pet'}'s type:
             <br />
             <select ref={type}>
@@ -73,7 +73,7 @@ export const PetInsuranceInfo = () => {
             </select>
             <br />
           </label>
-          <label>
+          <label className='petInfo'>
             {petName ? petName : 'Pet'}'s size:
             <br />
             <select ref={type}>
@@ -85,14 +85,14 @@ export const PetInsuranceInfo = () => {
             </select>
             <br />
           </label>
-          <label>
+          <label className='petInfo'>
             {petName ? petName : 'Pet'}'s initial cost:
             <br />
             £<input ref={initialCost} type='number' />
             <br />
           </label>
-          <label>
-            Neutered or spayed?:
+          <label className='petInfo'>
+            Has {petName ? petName : 'the pet'} been neutered or spayed?:
             <br />
             <select ref={neuteredOrSpayed}>
               <option value='Yes'>Yes</option>
@@ -100,8 +100,8 @@ export const PetInsuranceInfo = () => {
             </select>
             <br />
           </label>
-          <label>
-            Microchipped:
+          <label className='petInfo'>
+            Is {petName ? petName : 'the pet'} microchipped:
             <br />
             <select ref={microchipped}>
               <option value='Yes'>Yes</option>
@@ -109,8 +109,8 @@ export const PetInsuranceInfo = () => {
             </select>
             <br />
           </label>
-          <label>
-            Vaccines up to date?
+          <label className='petInfo'>
+            Are {petName ? petName : 'the pet'}'s vaccines up to date?
             <br />
             <select ref={vaccines}>
               <option value='Yes'>Yes</option>
@@ -118,8 +118,9 @@ export const PetInsuranceInfo = () => {
             </select>
             <br />
           </label>
-          <label>
-            pre-existing injuries or illnesses?
+          <label className='petInfo'>
+            Does {petName ? petName : 'the pet'} have any pre-existing injuries
+            or illnesses?
             <br />
             <select ref={injuriesOrIllnesses}>
               <option value='Yes'>Yes</option>
@@ -127,8 +128,8 @@ export const PetInsuranceInfo = () => {
             </select>
             <br />
           </label>
-          <label>
-            aggressive tendencies?
+          <label className='petInfo'>
+            Does {petName ? petName : 'the pet'} show any aggressive tendencies?
             <br />
             <select ref={aggression}>
               <option value='Yes'>Yes</option>
@@ -136,8 +137,9 @@ export const PetInsuranceInfo = () => {
             </select>
             <br />
           </label>
-          <label>
-            complaints or legal action in last 5 years?
+          <label className='petInfo'>
+            Has {petName ? petName : 'the pet'} been subject to any complaints
+            or legal action in last 5 years?
             <br />
             <select ref={complaints}>
               <option value='Yes'>Yes</option>
@@ -145,9 +147,9 @@ export const PetInsuranceInfo = () => {
             </select>
             <br />
           </label>
-          <label>
-            used for breeding, racing, guarding, hunting, or has had a
-            connection with a trade or business?
+          <label className='petInfo'>
+            Has {petName ? petName : 'the pet'} been used for breeding, racing,
+            guarding, hunting, or has had a connection with a trade or business?
             <br />
             <select ref={usage}>
               <option value='Yes'>Yes</option>
@@ -155,8 +157,9 @@ export const PetInsuranceInfo = () => {
             </select>
             <br />
           </label>
-          <label>
-            Does your pet live on premises where alcohol is sold?
+          <label className='petInfo'>
+            Does {petName ? petName : 'the pet'} live on premises where alcohol
+            is sold?
             <br />
             <select ref={alcohol}>
               <option value='Yes'>Yes</option>
