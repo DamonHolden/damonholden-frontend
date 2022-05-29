@@ -27,6 +27,9 @@ export const Header = () => {
         <Link className='nav-link' to='Pet_Insurance_Info'>
           Pet Insurance Info
         </Link>
+        <Link className='nav-link' to='Git_Message_Creator'>
+          Git Message Creator
+        </Link>
       </nav>
       <button
         className='button-secondary'

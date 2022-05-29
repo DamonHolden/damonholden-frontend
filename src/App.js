@@ -9,6 +9,7 @@ import { Footer } from './/Components/Footer';
 import './styles.css';
 import { DarkThemeContextProvider } from './Components/DarkThemeContext';
 import { ArrayConverter } from './Components/ArrayConverter';
+import { GitMessageCreator } from './Components/GitMessageGenerator';
 
 export const App = () => {
   return (
@@ -23,6 +24,10 @@ export const App = () => {
             <Route path='/Array_Converter' element={<ArrayConverter />} />
             <Route path='/Duck' element={<Videos />} />
             <Route path='/Pet_Insurance_Info' element={<PetInsuranceInfo />} />
+            <Route
+              path='/Git_Message_Creator'
+              element={<GitMessageCreator />}
+            />
           </Routes>
           <Footer />
         </div>
