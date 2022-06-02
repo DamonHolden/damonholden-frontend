@@ -13,27 +13,27 @@ export const GitMessageCreator = () => {
   const [type, setType] = useState();
   const [firstLineLength, setFirstLineLength] = useState(50);
   const [description, setDescription] = useState('');
+  const [body, setBody] = useState('');
 
   return (
     <animated.div className='page' style={springProps}>
       <h1>git message creator</h1>
-      {type && (
-        <Card>
-          <div>
-            <h2 ref={message}>
-              {type} {description}
-            </h2>
-            <button
-              className='button-primary'
-              onClick={() => {
-                navigator.clipboard.writeText(message.current.innerHTML);
-              }}
-            >
-              copy to clipboard
-            </button>
-          </div>
-        </Card>
-      )}
+      <Card>
+        <div>
+          <h2>generated message:</h2>
+          <pre ref={message}>
+            {type ? type + description + body : 'placeholder'}
+          </pre>
+          <button
+            className='button-primary'
+            onClick={() => {
+              navigator.clipboard.writeText(message.current.innerHTML);
+            }}
+          >
+            copy to clipboard
+          </button>
+        </div>
+      </Card>
       <Card>
         <h2>Select a type:</h2>
         <div
@@ -67,26 +67,49 @@ export const GitMessageCreator = () => {
           adding missing tests or correcting existing tests
           <br />
         </div>
+        {type ? (
+          <>
+            <h2>Add a description:</h2>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <input
+                type='text'
+                maxLength={49 - type.length}
+                onKeyDown={(e) => {
+                  if ([' '].includes(e.key) && e.target.value === '')
+                    e.preventDefault();
+                }}
+                onChange={(e) => {
+                  setFirstLineLength(50 - type.length - e.target.value.length);
+                  setDescription(` ${e.target.value.toLowerCase()}`);
+                }}
+              />
+              {'characters remaining ' + (firstLineLength - 1)}
+            </div>
+          </>
+        ) : null}
+        {description ? (
+          <>
+            <h2>Add an optional body:</h2>
+            <input
+              type='text'
+              onKeyDown={(e) => {
+                if ([' '].includes(e.key) && e.target.value === '')
+                  e.preventDefault();
+              }}
+              onChange={(e) => {
+                let result = '';
+                let str = e.target.value;
+                while (str.length > 0) {
+                  result += str.substring(0, 72) + '\n';
+                  str = str.substring(72);
+                }
+                setBody(`\n\n${result}`);
+              }}
+            />
+          </>
+        ) : null}
       </Card>
-      {type ? (
-        <Card>
-          <h2>Add a description:</h2>
-          <input
-            type='text'
-            maxLength={50 - type.length}
-            onKeyDown={(e) => {
-              console.log(e.target.value);
-              if ([' '].includes(e.key) && e.target.value === '')
-                e.preventDefault();
-            }}
-            onChange={(e) => {
-              setFirstLineLength(50 - type.length - e.target.value.length);
-              setDescription(e.target.value.toLowerCase());
-            }}
-          />
-          {'characters remaining ' + firstLineLength}
-        </Card>
-      ) : null}
+
       <Card>
         <h2>Based on following specification:</h2>
         <pre>{`Structure:
