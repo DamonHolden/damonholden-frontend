@@ -1,15 +1,15 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Header } from './Components/Header';
-import { Home } from './Components/Home';
-import { Calculator } from './Components/Calculator';
-import { DatabaseTester } from './Components/DatabaseTester';
-import { Videos } from './Components/Videos';
-import { PetInsuranceInfo } from './Components/PetInsuranceInfo';
-import { Footer } from './/Components/Footer';
 import './styles.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { DarkThemeContextProvider } from './Components/DarkThemeContext';
-import { ArrayConverter } from './Components/ArrayConverter';
-import { GitMessageCreator } from './Components/GitMessageGenerator';
+import { Header } from './Components/Header';
+import { Footer } from './Components/Footer';
+import { Home } from './Components/pages/Home';
+import { Calculator } from './Components/pages/Calculator';
+import { DatabaseTester } from './Components/pages/DatabaseTester';
+import { ArrayConverter } from './Components/pages/ArrayConverter';
+import { Videos } from './Components/pages/Videos';
+import { PetInsuranceInfo } from './Components/pages/PetInsuranceInfo';
+import { GitMessageCreator } from './Components/pages/GitMessageGenerator';
 
 export const App = () => {
   return (

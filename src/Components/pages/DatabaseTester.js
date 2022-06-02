@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Card } from './Card';
+import { Card } from '../Card';
 import axios from 'axios';
 import { animated, useSpring } from 'react-spring';
 

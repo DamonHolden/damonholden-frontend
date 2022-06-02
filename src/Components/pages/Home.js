@@ -1,5 +1,5 @@
-import deploymentDiagram from '../images/deployment_diagram.png';
-import { Card } from './Card';
+import deploymentDiagram from '../../images/deployment_diagram.png';
+import { Card } from '../Card';
 import { animated, useSpring } from 'react-spring';
 
 export const Home = () => {
@@ -29,13 +29,13 @@ export const Home = () => {
           <p>
             This sites architecture is based on the{' '}
             <a
-              className='eddie-hearn-link'
+              className='text-link'
               href='https://www.mongodb.com/mern-stack'
               target={'_blank'}
               rel='noreferrer'
             >
               MERN
-            </a>
+            </a>{' '}
             stack, however the project is only really a React application with a
             very basic Express Node.js application setup as a template backend
             which will eventually link to a cloud-based mongoDB database. The
@@ -54,7 +54,7 @@ export const Home = () => {
             You should always try and get something positive out of any
             experience, so if nothing else here are
             <a
-              className='eddie-hearn-link'
+              className='text-link'
               href='https://m.youtube.com/watch?t=1505&v=HXpj7mpm6hA&feature=youtu.be'
               target={'_blank'}
               rel='noreferrer'

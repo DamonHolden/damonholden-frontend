@@ -1,4 +1,4 @@
-import { Card } from './Card';
+import { Card } from '../Card';
 import { animated, useSpring } from 'react-spring';
 import { useRef, useState } from 'react';
 

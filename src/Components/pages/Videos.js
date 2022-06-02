@@ -1,5 +1,5 @@
-import { Video } from './Video';
-import { Card } from './Card';
+import { Video } from '../Video';
+import { Card } from '../Card';
 import { animated, useSpring } from 'react-spring';
 
 export const Videos = () => {
