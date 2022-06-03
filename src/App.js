@@ -2,6 +2,7 @@ import './styles.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { DarkThemeContextProvider } from './Components/DarkThemeContext';
 import { Header } from './Components/Header';
+import { CollapsableNavbar } from './Components/CollapsableNavbar';
 import { Footer } from './Components/Footer';
 import { Home } from './Components/pages/Home';
 import { Calculator } from './Components/pages/Calculator';
@@ -16,7 +17,7 @@ export const App = () => {
     <Router>
       <DarkThemeContextProvider>
         <div className='App'>
-          <Header />
+          {window.screen.width > 1000 ? <Header /> : <CollapsableNavbar />}
           <Routes>
             <Route path='/' exact element={<Home />} />
             <Route path='/UOS_DTS_Calculator' element={<Calculator />} />

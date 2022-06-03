@@ -55,6 +55,10 @@ body {
   background: rgb(172, 172, 172);
 }
 
+.nav-toggle {
+  align-self: flex-end;
+}
+
 .card {
   display: flex;
   flex-direction: column;
