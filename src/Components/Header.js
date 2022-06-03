@@ -31,6 +31,13 @@ export const Header = () => {
           Git Message Creator
         </Link>
       </nav>
+      <a
+        href='https://www.paypal.com/paypalme/DamonHolden?country.x=GB&locale.x=en_GB'
+        target={'_blank'}
+        rel='noreferrer'
+      >
+        <button className='button-secondary'>send me some mulla</button>
+      </a>
       <button
         className='button-secondary'
         onClick={() => {
