@@ -14,51 +14,56 @@ export const DatabaseTester = () => {
   const [response, setResponse] = useState(
     'No response from backend this time'
   );
-  const [hasSearched, setHasSearched] = useState(false);
+
+  const searchForPokemon = () => {
+    axios
+      .get(`http://localhost:3001/pokemon/${searchName.current.value}`)
+      .then((response) => {
+        if (response.data === null) return;
+        else setResponse(response.data);
+      });
+  };
 
   return (
     <animated.div className='page' style={springProps}>
-      <h1>Database Tester</h1>
+      <h1>pokemon Search</h1>
       <Card>
-        <input ref={searchName} type='text' />
-        <button
-          className='button-primary'
-          onClick={() => {
-            setHasSearched(true);
-            axios
-              .get(`http://localhost:3001/pokemon/${searchName.current.value}`)
-              .then((response) => {
-                setResponse(response.data);
-              })
-              .catch((error) => {
-                console.log(error);
-                setHasSearched(false);
-              });
+        <div>
+          <input
+            ref={searchName}
+            type='text'
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') searchForPokemon();
+            }}
+          />
+          <button className='button-primary' onClick={() => searchForPokemon()}>
+            Search
+          </button>
+        </div>
+      </Card>
+      <Card>
+        <div
+          className='grade-form-area'
+          style={{
+            alignItems: 'center',
           }}
         >
-          Search
-        </button>
+          <img
+            style={{ width: '200px' }}
+            src={
+              response.name
+                ? require(`../images/pokemon/${response.name}.png`)
+                : null
+            }
+            alt='pokemon'
+          />
+          <div>
+            <h2>Name: {response.name}</h2>
+            <h2>Type: {response.type}</h2>
+            <h2>pokedex number: {response.pokedex_number}</h2>
+          </div>
+        </div>
       </Card>
-      {/* <Card>
-        <h2>Wow, such empty</h2>
-        <p>
-          This section of the site is a placeholder for an eventual way to
-          facilitate backend database communication.
-        </p>
-        <p>
-          Currently, there is no database set-up at all, but eventually, this
-          section of the site will allow users to produce API requests to a
-          backend.
-        </p>
-      </Card> */}
-      {hasSearched && (
-        <Card>
-          <h2>Name: {response.name}</h2>
-          <h2>Type: {response.type}</h2>
-          <h2>pokedex number: {response.pokedex_number}</h2>
-          {response ? <p>provided by express</p> : null}
-        </Card>
-      )}
     </animated.div>
   );
 };
