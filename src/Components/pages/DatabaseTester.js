@@ -13,7 +13,7 @@ export const DatabaseTester = () => {
   const searchForPokemon = () => {
     axios
       .get(
-        `https://damonholden-backend-2.herokuapp.com/pokemon/${searchName.current.value}`
+        `https://damonholden-backend.herokuapp.com/pokemon/${searchName.current.value}`
       )
       .then((response) => {
         if (response.data === null) return;
