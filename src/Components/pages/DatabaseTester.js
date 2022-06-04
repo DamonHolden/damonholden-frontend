@@ -4,63 +4,74 @@ import axios from 'axios';
 import { PageWrapper } from '../PageWrapper';
 
 export const DatabaseTester = () => {
-  const [response, setResponse] = useState(
-    'No response from backend this time'
-  );
+  const [dBResponse, setDBResponse] = useState('');
 
   const searchName = useRef();
 
   const searchForPokemon = () => {
-    axios
-      .get(
-        `https://damonholden-backend.herokuapp.com/pokemon/${searchName.current.value}`
-      )
-      .then((response) => {
-        if (response.data === null) return;
-        else setResponse(response.data);
-      });
+    if (searchName.current.value === '') setDBResponse('');
+    else {
+      axios
+        .get(
+          `https://damonholden-backend.herokuapp.com/pokemon/${searchName.current.value.toLowerCase()}`
+        )
+        .then((response) => {
+          if (response.data === null) setDBResponse('');
+          else setDBResponse(response.data);
+        });
+    }
   };
 
   return (
     <PageWrapper>
       <h1>pokemon search</h1>
       <Card>
-        <div>
+        <div className='searchbar'>
           <input
+            className='search-input'
             ref={searchName}
             type='text'
             onKeyDown={(e) => {
               if (e.key === 'Enter') searchForPokemon();
             }}
           />
-          <button className='button-primary' onClick={() => searchForPokemon()}>
+          <button
+            className='search-button-primary'
+            onClick={() => searchForPokemon()}
+          >
             Search
           </button>
         </div>
       </Card>
-      <Card>
-        <div
-          className='grade-form-area'
-          style={{
-            alignItems: 'center',
-          }}
-        >
-          <img
-            style={{ width: '200px' }}
-            src={
-              response.name
-                ? require(`../../images/pokemon/${response.name}.png`)
-                : null
-            }
-            alt='pokemon'
-          />
-          <div>
-            <h2>Name: {response.name}</h2>
-            <h2>Type: {response.type}</h2>
-            <h2>pokedex number: {response.pokedex_number}</h2>
+      {dBResponse && (
+        <Card>
+          <div className='content-row'>
+            <img
+              style={{ width: '300px' }}
+              src={
+                dBResponse.name
+                  ? require(`../../images/pokemon/${dBResponse.name}.png`)
+                  : null
+              }
+              alt='pokemon'
+            />
+            <div className='content-column'>
+              <div className='key-value'>
+                <h3>Name:</h3>
+                <h4>{dBResponse.name}</h4>
+              </div>
+              <div className='key-value'>
+                <h3>Type:</h3>
+                <h4>{dBResponse.type}</h4>
+              </div>
+              <div className='key-value'>
+                <h3>Pokedex Number:</h3>
+                <h4>{dBResponse.pokedex_number}</h4>
+              </div>
+            </div>
           </div>
-        </div>
-      </Card>
+        </Card>
+      )}
     </PageWrapper>
   );
 };

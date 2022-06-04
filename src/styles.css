@@ -97,6 +97,16 @@ h2 {
   margin: 0px;
 }
 
+h3 {
+  color: var(--primary-color);
+  font-size: 20px;
+  margin: 0px;
+}
+
+h4 {
+  margin: 0px;
+}
+
 p {
   width: 800px;
   max-width: 100%;
@@ -116,11 +126,28 @@ textarea {
   height: 200px;
 }
 
-.grade-form-area {
+.content-row {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  max-width: 100%;
+}
+
+.content-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  max-width: 100%;
+}
+
+.key-value {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .grade-form {
@@ -283,4 +310,41 @@ iframe {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+/* searchbar */
+
+.searchbar {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 100%;
+}
+
+.search-input {
+  border-radius: 10px 0px 0px 10px;
+  border-color: var(--primary-color);
+  border-style: solid;
+  padding-left: 10px;
+  font-size: 20px;
+  margin: 0px;
+  height: 31px;
+  width: 100%;
+}
+
+.search-button-primary {
+  font-weight: 700;
+  font-size: 20px;
+  padding: 5px;
+  background-color: var(--primary-color);
+  color: white;
+  border-color: transparent;
+  border-radius: 0px 10px 10px 0px;
+}
+.search-button-primary:hover {
+  background-color: #8b3456;
+  cursor: pointer;
+}
+.search-button-primary:active {
+  background-color: #471b2d;
+  color: rgb(184, 184, 184);
 }

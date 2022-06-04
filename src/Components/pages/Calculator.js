@@ -113,7 +113,7 @@ export const Calculator = () => {
     <PageWrapper>
       <h1>UOS DTS Grade Calculator</h1>
       <Card>
-        <div className='grade-form-area'>
+        <div className='content-row'>
           <div className='grade-form'>
             <h2>Level 5:</h2>
             <GradeInput
