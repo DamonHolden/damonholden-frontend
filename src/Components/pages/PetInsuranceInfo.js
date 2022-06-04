@@ -1,13 +1,8 @@
 import { useRef, useState } from 'react';
 import { Card } from '../Card';
-import { animated, useSpring } from 'react-spring';
+import { PageWrapper } from '../PageWrapper';
 
 export const PetInsuranceInfo = () => {
-  const springProps = useSpring({
-    opacity: 1,
-    from: { opacity: 0 },
-  });
-
   const typeOfAnimal = useRef();
   const name = useRef();
   const gender = useRef();
@@ -24,7 +19,7 @@ export const PetInsuranceInfo = () => {
   const alcohol = useRef();
   const [petName, setPetName] = useState();
   return (
-    <animated.div className='page' style={springProps}>
+    <PageWrapper>
       <Card>
         <form className='pet-form'>
           <label className='petInfo'>
@@ -173,7 +168,6 @@ export const PetInsuranceInfo = () => {
           onClick={() => {
             // https://youtu.be/io2blfAlO6E
             const time = new Date();
-            console.log(name);
             const data = `data,value
 type,${typeOfAnimal.current.value}
 name,${name.current.value}
@@ -210,6 +204,6 @@ info valid from, ${time.toLocaleString()}
           download
         </button>
       </Card>
-    </animated.div>
+    </PageWrapper>
   );
 };

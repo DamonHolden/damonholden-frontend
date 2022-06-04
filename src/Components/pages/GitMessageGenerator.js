@@ -1,13 +1,8 @@
 import { Card } from '../Card';
-import { animated, useSpring } from 'react-spring';
 import { useRef, useState } from 'react';
+import { PageWrapper } from '../PageWrapper';
 
 export const GitMessageCreator = () => {
-  const springProps = useSpring({
-    opacity: 1,
-    from: { opacity: 0 },
-  });
-
   const message = useRef();
 
   const [type, setType] = useState();
@@ -16,7 +11,7 @@ export const GitMessageCreator = () => {
   const [body, setBody] = useState('');
 
   return (
-    <animated.div className='page' style={springProps}>
+    <PageWrapper>
       <h1>git message creator</h1>
       <Card>
         <div>
@@ -165,6 +160,6 @@ Footer:
 
 	A detailed explanation can be found in this document.`}</pre>
       </Card>
-    </animated.div>
+    </PageWrapper>
   );
 };

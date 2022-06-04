@@ -1,12 +1,8 @@
 import { useState } from 'react';
 import { Card } from '../Card';
-import { animated, useSpring } from 'react-spring';
+import { PageWrapper } from '../PageWrapper';
 
 export const ArrayConverter = () => {
-  const springProps = useSpring({
-    opacity: 1,
-    from: { opacity: 0 },
-  });
   const [convertedArray, setConvertedArray] = useState();
 
   const makeArray = () => {
@@ -19,12 +15,10 @@ export const ArrayConverter = () => {
         betterText += "'" + element + "',\n";
       }
     });
-    console.log(betterText.slice);
-    console.log(document.getElementById('sort').checked);
     setConvertedArray(betterText.slice(0, -2));
   };
   return (
-    <animated.div className='page' style={springProps}>
+    <PageWrapper>
       <h1>array converter</h1>
       <Card>
         <textarea id='list'></textarea>
@@ -42,6 +36,6 @@ export const ArrayConverter = () => {
 
         <textarea defaultValue={convertedArray}></textarea>
       </Card>
-    </animated.div>
+    </PageWrapper>
   );
 };
