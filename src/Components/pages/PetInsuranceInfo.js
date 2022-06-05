@@ -20,7 +20,7 @@ export const PetInsuranceInfo = () => {
   const [petName, setPetName] = useState();
   return (
     <PageWrapper>
-      <Card>
+      <Card contentDirection={`column`}>
         <form className='pet-form'>
           <label className='petInfo'>
             Type of animal:

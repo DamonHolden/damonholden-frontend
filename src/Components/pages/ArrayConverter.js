@@ -20,7 +20,7 @@ export const ArrayConverter = () => {
   return (
     <PageWrapper>
       <h1>array converter</h1>
-      <Card>
+      <Card contentDirection={`column`}>
         <textarea id='list'></textarea>
         <label>
           sort?

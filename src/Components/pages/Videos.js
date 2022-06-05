@@ -6,7 +6,7 @@ export const Videos = () => {
   return (
     <PageWrapper>
       <h1>behold, the perfect duck</h1>
-      <Card>
+      <Card contentDirection={`column`}>
         <div className='videos'>
           <Video videoId='BepD5Kkl8Tg' />
         </div>

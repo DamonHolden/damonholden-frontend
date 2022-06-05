@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import { Card } from '../Card';
 import axios from 'axios';
 import { PageWrapper } from '../PageWrapper';
+import { SearchBar } from '../SearchBar';
 
 export const DatabaseTester = () => {
   const [dBResponse, setDBResponse] = useState('');
@@ -25,26 +26,14 @@ export const DatabaseTester = () => {
   return (
     <PageWrapper>
       <h1>pokemon search</h1>
-      <Card>
-        <div className='searchbar'>
-          <input
-            className='search-input'
-            ref={searchName}
-            type='text'
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') searchForPokemon();
-            }}
-          />
-          <button
-            className='search-button-primary'
-            onClick={() => searchForPokemon()}
-          >
-            Search
-          </button>
-        </div>
+      <Card contentDirection={`column`}>
+        <SearchBar
+          componentRef={searchName}
+          searchFunction={searchForPokemon}
+        />
       </Card>
       {dBResponse && (
-        <Card>
+        <Card contentDirection={`column`}>
           <div className='content-row'>
             <img
               style={{ width: '300px' }}

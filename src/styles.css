@@ -1,26 +1,32 @@
+/* imports */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* global styles*/
 * {
   --primary-color: #bb4672;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  /* background-repeat: no-repeat; */
   background-attachment: fixed;
   background-size: cover;
   background-position: center right 25%;
   margin: 20px;
 }
 
+pre {
+  overflow: auto;
+}
+
+/* app div */
 .App {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   gap: 40px;
   max-width: 100%;
 }
 
+/* style for pages */
 .page {
   display: flex;
   flex-direction: column;
@@ -28,6 +34,7 @@ body {
   gap: inherit;
 }
 
+/* header */
 .header {
   display: flex;
   flex-wrap: wrap;
@@ -35,11 +42,13 @@ body {
   align-items: center;
   gap: 10px;
 }
+
 .page-navbar {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .nav-link {
   color: white;
   padding: 10px;
@@ -59,36 +68,78 @@ body {
   align-self: flex-end;
 }
 
-.card {
+/* footer */
+footer {
+  color: white;
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  flex-wrap: wrap;
+  /* max-width: 100%; */
+  gap: 10px;
+}
+.author {
+  text-align: center;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  /* width: 100%; */
+}
+.footer-link {
+  color: white;
+}
+.footer-link:hover {
+  cursor: pointer;
+}
+.text-link {
+  color: var(--primary-color);
+}
+.netlify-link {
+  width: 100px;
+}
+.github-link {
+  width: 40px;
+}
+
+/* content divs */
+.content-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 100%;
+}
+
+.content-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  max-width: 100%;
+}
+
+/* card styling */
+.card {
   background-color: white;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 015);
-  max-width: 100%;
   box-sizing: border-box; /* This will include the padding in the overall width of the element */
-  gap: 20px;
 }
 
-.inner-card {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: rgb(206, 206, 206);
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  border-radius: 20px;
-  gap: 10px;
-}
-
+/* global text styling */
 h1 {
   font-size: 40px;
   text-transform: capitalize;
   text-shadow: 2px 2px rgba(0, 0, 0, 015);
   color: white;
   margin: 0px;
-  /* word-wrap: break-word; */
 }
 
 h2 {
@@ -113,12 +164,21 @@ p {
   margin: 0px;
 }
 
+/* text styling */
+.text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* global image styling */
 img {
   width: 700px;
   max-width: 100%;
   align-self: center;
 }
 
+/* inputs */
 textarea {
   resize: none;
   width: 800px;
@@ -126,23 +186,7 @@ textarea {
   height: 200px;
 }
 
-.content-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 100%;
-}
-
-.content-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-  max-width: 100%;
-}
-
+/* div with keys and values */
 .key-value {
   display: flex;
   flex-direction: row;
@@ -150,27 +194,7 @@ textarea {
   gap: 10px;
 }
 
-.grade-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  /* width: 300px; */
-  /* max-width: 100%; */
-  /* margin: 0px auto; */
-}
-
-.grade-input {
-  /* margin-bottom: 15px; */
-  margin-top: 5px;
-  border-radius: 10px;
-  border-color: var(--primary-color);
-  border-style: solid;
-  padding-left: 10px;
-  width: 100%;
-  box-sizing: border-box;
-  font-size: 20px;
-}
-
+/* buttons */
 .button-primary {
   font-weight: 700;
   font-size: 20px;
@@ -179,7 +203,6 @@ textarea {
   color: white;
   border-color: transparent;
   border-radius: 10px;
-  /* box-shadow: 2px 2px 0 rgba(0, 0, 0, 015); */
 }
 .button-primary:hover {
   background-color: #8b3456;
@@ -209,58 +232,29 @@ textarea {
   color: #81304f;
 }
 
-.output {
-  display: flex;
-  font-size: 20px;
-  justify-content: center;
-  align-items: center;
-}
-
-pre {
-  overflow: auto;
-}
-
-footer {
-  color: white;
+/* PAGE: calculator */
+.grade-form {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-  flex-wrap: wrap;
-  /* max-width: 100%; */
-  gap: 10px;
+  gap: 15px;
 }
 
-.author {
-  text-align: center;
+.grade-input {
+  border-radius: 10px;
+  border-color: var(--primary-color);
+  border-style: solid;
+  padding-left: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
 }
 
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  /* width: 100%; */
+.code-image {
+  border-radius: 20px;
 }
 
-.footer-link {
-  color: white;
-}
-.footer-link:hover {
-  cursor: pointer;
-}
-.text-link {
-  color: var(--primary-color);
-}
-
-.netlify-link {
-  width: 100px;
-}
-.github-link {
-  width: 40px;
-}
-
+/* PAGE: duck */
 .videos {
   display: flex;
   flex-wrap: wrap;
@@ -289,23 +283,7 @@ iframe {
   height: 100%;
 }
 
-.code-image {
-  border-radius: 20px;
-}
-
-.sub-heading {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.text-box {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
+/* PAGE: pet-form */
 .pet-form {
   display: flex;
   flex-direction: column;

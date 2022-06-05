@@ -1,6 +1,5 @@
 import { GradeInput } from '../GradeInput';
 import { CodeSnippet } from '../CodeSnippet';
-import { Result } from '../Result';
 import { CodeSnippetPicture } from '../CodeSnippetPicture';
 import { useState, useRef } from 'react';
 import { Card } from '../Card';
@@ -112,7 +111,7 @@ export const Calculator = () => {
   return (
     <PageWrapper>
       <h1>UOS DTS Grade Calculator</h1>
-      <Card>
+      <Card contentDirection={`column`}>
         <div className='content-row'>
           <div className='grade-form'>
             <h2>Level 5:</h2>
@@ -171,18 +170,21 @@ export const Calculator = () => {
             <GradeInput label='Synoptic Project:' reference={synopticProject} />
           </div>
         </div>
-        <div className='inner-card'>
-          <Result degree={result} />
+        <div className='content-row'>
+          <h4>{result}</h4>
           <button
             className='button-primary'
             onClick={() => setResult(degreeCalculator)}
           >
-            Calculate
+            calculate
           </button>
         </div>
       </Card>
-      <Card>
-        <div className='sub-heading'>
+      <Card contentDirection={`column`}>
+        <div
+          className='content-row'
+          style={{ justifyContent: 'space-between' }}
+        >
           <h2 className='code-title'>JavaScript logic</h2>
           <button
             className='button-primary'

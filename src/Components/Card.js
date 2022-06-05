@@ -9,7 +9,10 @@ export const Card = (props) => {
   };
 
   return (
-    <div className='card' style={cardStyles}>
+    <div
+      className={`card content-${props.contentDirection}`}
+      style={cardStyles}
+    >
       {props.children}
     </div>
   );

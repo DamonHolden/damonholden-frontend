@@ -13,7 +13,7 @@ export const GitMessageCreator = () => {
   return (
     <PageWrapper>
       <h1>git message creator</h1>
-      <Card>
+      <Card contentDirection={`column`}>
         <div>
           <h2>generated message:</h2>
           <pre ref={message}>
@@ -29,7 +29,7 @@ export const GitMessageCreator = () => {
           </button>
         </div>
       </Card>
-      <Card>
+      <Card contentDirection={`column`}>
         <h2>Select a type:</h2>
         <div
           onChange={(e) => {
@@ -105,7 +105,7 @@ export const GitMessageCreator = () => {
         ) : null}
       </Card>
 
-      <Card>
+      <Card contentDirection={`column`}>
         <h2>Based on following specification:</h2>
         <pre>{`Structure:
 	<type>(<scope(Optional)>): <description>
