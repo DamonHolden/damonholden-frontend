@@ -6,6 +6,9 @@ import { SearchBar } from '../SearchBar';
 
 export const DatabaseTester = () => {
   const [dBResponse, setDBResponse] = useState('');
+  const [pokemonName, setPokemonName] = useState('');
+  const [pokemonType, setPokemonType] = useState('');
+  const [pokemonNumber, setPokemonNumber] = useState('');
 
   const searchName = useRef();
 
@@ -43,19 +46,24 @@ export const DatabaseTester = () => {
                   : null
               }
               alt='pokemon'
+              onLoad={() => {
+                setPokemonName(dBResponse.name);
+                setPokemonType(dBResponse.type);
+                setPokemonNumber(dBResponse.pokedex_number);
+              }}
             />
             <div className='content-column'>
               <div className='key-value'>
                 <h3>Name:</h3>
-                <h4>{dBResponse.name}</h4>
+                <h4>{pokemonName}</h4>
               </div>
               <div className='key-value'>
                 <h3>Type:</h3>
-                <h4>{dBResponse.type}</h4>
+                <h4>{pokemonType}</h4>
               </div>
               <div className='key-value'>
                 <h3>Pokedex Number:</h3>
-                <h4>{dBResponse.pokedex_number}</h4>
+                <h4>{pokemonNumber}</h4>
               </div>
             </div>
           </div>

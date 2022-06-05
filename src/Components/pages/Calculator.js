@@ -131,7 +131,7 @@ export const Calculator = () => {
               label='Data Structures Algorithms and Advanced Programming:'
               reference={dataStructuresAlgorithmsAndAdvancedProgramming}
             />
-            <GradeInput label='Research Skills' reference={researchSkills} />
+            <GradeInput label='Research Skills:' reference={researchSkills} />
             <GradeInput
               label='Software DesignDevelopment and Engineering: Assignment 1:'
               reference={softwareDesignDevelopmentAndEngineering1}
