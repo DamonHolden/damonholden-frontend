@@ -46,6 +46,9 @@ export const DatabaseTester = () => {
                   : null
               }
               alt='pokemon'
+              onClick={() =>
+                new Audio(require(`../../sounds/${dBResponse.name}.mp3`)).play()
+              }
               onLoad={() => {
                 setPokemonName(dBResponse.name);
                 setPokemonType(dBResponse.type);
