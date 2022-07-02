@@ -11,6 +11,7 @@ import { ArrayConverter } from './Components/pages/ArrayConverter';
 import { Videos } from './Components/pages/Videos';
 import { PetInsuranceInfo } from './Components/pages/PetInsuranceInfo';
 import { GitMessageCreator } from './Components/pages/GitMessageGenerator';
+import { Projects } from './Components/pages/Projects';
 
 export const App = () => {
   return (
@@ -29,7 +30,9 @@ export const App = () => {
               path='/Git_Message_Creator'
               element={<GitMessageCreator />}
             />
+            <Route path='/Projects' element={<Projects />} />
           </Routes>
+
           <Footer />
         </div>
       </DarkThemeContextProvider>

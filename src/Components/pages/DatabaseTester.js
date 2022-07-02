@@ -39,7 +39,7 @@ export const DatabaseTester = () => {
         <Card contentDirection={`column`}>
           <div className='content-row'>
             <img
-              style={{ width: '300px' }}
+              width={300}
               src={
                 dBResponse.name
                   ? require(`../../images/pokemon/${dBResponse.name}.png`)

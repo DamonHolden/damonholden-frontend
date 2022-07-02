@@ -24,11 +24,14 @@ export const Header = () => {
         <Link className='nav-link' to='/Duck'>
           Duck
         </Link>
-        <Link className='nav-link' to='Pet_Insurance_Info'>
+        <Link className='nav-link' to='/Pet_Insurance_Info'>
           Pet Insurance Info
         </Link>
-        <Link className='nav-link' to='Git_Message_Creator'>
+        <Link className='nav-link' to='/Git_Message_Creator'>
           Git Message Creator
+        </Link>
+        <Link className='nav-link' to='/Projects'>
+          Projects
         </Link>
       </nav>
       <a

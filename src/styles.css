@@ -113,7 +113,6 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 20px;
   max-width: 100%;
 }
@@ -128,6 +127,7 @@ footer {
 
 /* card styling */
 .card {
+  width: fit-content;
   background-color: white;
   padding: 20px;
   border-radius: 20px;
@@ -161,9 +161,8 @@ h4 {
 }
 
 p {
-  width: 800px;
-  max-width: 100%;
-  margin: 0px;
+  /* width: 800px; */
+  max-width: minmax(700px, 100%);
 }
 
 /* text styling */
@@ -171,11 +170,11 @@ p {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: fit-content;
 }
 
 /* global image styling */
 img {
-  width: 700px;
   max-width: 100%;
   align-self: center;
 }
@@ -332,4 +331,8 @@ input:focus {
 .search-button-primary:active {
   background-color: #471b2d;
   color: rgb(184, 184, 184);
+}
+
+sup.status {
+  color: red;
 }
