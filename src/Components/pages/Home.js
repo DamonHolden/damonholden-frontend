@@ -8,7 +8,7 @@ export const Home = () => {
 
   return (
     <PageWrapper>
-      <h1>Hi, I'm Damon, and on occasion, I like to build things.</h1>
+      <h1>Hi, I'm Damon, and on occasion, I build web-related stuff.</h1>
       <Card contentDirection={`column`}>
         <h2>So what is this site for?</h2>
 
